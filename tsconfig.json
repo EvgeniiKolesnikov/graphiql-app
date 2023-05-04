@@ -7,6 +7,8 @@
     "esModuleInterop": true,
     "allowJs": false,
 
+    "useDefineForClassFields": true,
+
     "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
@@ -15,16 +17,22 @@
     "noEmit": true,
     "noImplicitAny": true,
     "jsx": "react-jsx",
-    "baseUrl": "src",
     "outDir": "dist",
 
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+
+    "baseUrl": "src",
+    "paths": {
+      "assets/*": ["assets/*"],
+      "components/*": ["components/*"],
+      "pages/*": ["pages/*"]
+    }
   },
   "include": ["src", "./*.json", "src/**/*.ts"],
   "exclude": ["**/node_modules/**", "**/tmp/**", "**/build/**", "**/dist/**"],
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
