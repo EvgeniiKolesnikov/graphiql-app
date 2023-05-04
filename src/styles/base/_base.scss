@@ -10,6 +10,10 @@
 html {
   font-size: 10px;
 }
+body {
+  @include font(1.4rem, 120%);
+  color: $dark-color;
+}
 
 .container {
   width: 100%;

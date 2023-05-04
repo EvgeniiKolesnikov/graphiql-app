@@ -1,0 +1,30 @@
+.header {
+  padding: 1rem 0;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    &-item {
+      @extend %transition;
+      margin: 0 0.8rem;
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+  &__link {
+    text-decoration: none;
+  }
+}
+.menu__link.active {
+  color: $main-color;
+}
