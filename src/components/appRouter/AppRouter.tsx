@@ -1,12 +1,12 @@
+import MainPage from '../../pages/MainPage';
+import NotFoundPage from '../../pages/NotFoundPage';
+import WelcomePage from '../../pages/WelcomePage';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { NotFoundPage } from '../../pages';
-import { WelcomePage } from '../../pages';
-import { MainPage } from '../../pages';
-import { Layout } from 'components';
+import { Layout } from '..';
 
 const AppRouter = () => {
   return (
-    <div className="app-router__wrap">
+    <div>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<WelcomePage />} />
