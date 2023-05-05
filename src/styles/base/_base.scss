@@ -12,6 +12,7 @@
 html {
   font-size: 10px;
 }
+
 body {
   @include font(1.4rem, 120%);
   color: $dark-color;
@@ -27,6 +28,7 @@ body {
     padding: 0 1rem;
   }
 }
+
 #root {
   margin: 0;
   min-height: 100vh;

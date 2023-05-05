@@ -13,39 +13,46 @@
     @content;
   }
 }
+
 @mixin minQ-desktop {
   @media (min-width: $break-xl) {
     @content;
   }
 }
+
 // 1280
 @mixin maxQ-lg-desktop {
   @media (max-width: $break-lg) {
     @content;
   }
 }
+
 @mixin minQ-lg-desktop {
   @media (min-width: $break-lg) {
     @content;
   }
 }
+
 // 1024
 @mixin maxQ-md-desktop {
   @media (max-width: $break-md) {
     @content;
   }
 }
+
 @mixin minQ-md-desktop {
   @media (min-width: $break-md) {
     @content;
   }
 }
+
 // 768
 @mixin maxQ-tablet {
   @media (max-width: $break-sm) {
     @content;
   }
 }
+
 @mixin minQ-tablet {
   @media (min-width: $break-sm) {
     @content;
