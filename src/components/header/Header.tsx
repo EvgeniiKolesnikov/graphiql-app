@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 import handleActiveLink from '../../utils/hadleActiveLink';
-import "./appHeader.scss";
+import "./header.scss";
 
 const Header = () => {
   const links = [
-    { id: 1, title: 'Welcome Page', link: '/' },
-    { id: 2, title: 'Main Page', link: 'main' },
+    { id: 1, title: 'Welcome', link: '/' },
+    { id: 2, title: 'Main', link: 'main' },
   ];
 
   return (

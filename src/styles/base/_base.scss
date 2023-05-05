@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 * {
   @extend %font-primary;
   line-height: 120%;
