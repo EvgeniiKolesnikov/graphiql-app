@@ -6,26 +6,16 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowJs": false,
-
-<<<<<<< HEAD
-    /* Bundler mode */
-    "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true,
-    // "allowImportingTsExtensions": true,
-=======
     "useDefineForClassFields": true,
-
     "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
->>>>>>> 584d71c0457dde6ef17d433d9a525b2183f4bd2b
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "noImplicitAny": true,
     "jsx": "react-jsx",
     "outDir": "dist",
-
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,

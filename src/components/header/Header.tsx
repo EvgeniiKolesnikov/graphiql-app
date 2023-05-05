@@ -1,6 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 import handleActiveLink from '../../utils/hadleActiveLink';
-import "./Header.scss";
+import s from './Header.module.scss';
 
 const Header = () => {
   const links = [
@@ -10,16 +10,16 @@ const Header = () => {
 
   return (
     <>
-      <header className="header">
-        <div className="container header__container">
-          <nav className="menu">
-            <ul className="menu__list">
+      <header className={s.header}>
+        <div className={s.container}>
+          <nav className={s.menu}>
+            <ul className={s.menu__list}>
               {links.map(({ id, title, link }) => {
                 return (
-                  <li className="menu__list-item" key={id}>
+                  <li className={s.list__item} key={id}>
                     <NavLink
                       end
-                      className={({isActive}) => handleActiveLink(isActive)}
+                      className={({ isActive }) => handleActiveLink(isActive, s)}
                       to={link}
                     >
                       {title}
