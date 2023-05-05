@@ -1,7 +1,24 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+/// <reference types="vite/client" />
+/// <reference types="vite-plugin-svgr/client" />
 
-// https://vitejs.dev/config/
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import svgr from 'vite-plugin-svgr';
+// import stylelint from 'vite-plugin-stylelint';
+
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [
+    svgr(),
+    react(),
+    // stylelint({
+    //   fix: true,
+    // }),
+  ],
+  resolve: {
+    alias: {
+      assets: './src/assets',
+      components: './src/components',
+      pages: './src/pages',
+    },
+  },
+});
