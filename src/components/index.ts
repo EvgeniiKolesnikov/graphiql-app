@@ -7,10 +7,10 @@
 // import Component2 from './Component2/Component2';
 // export { Component1, Component2 };
 
-import AppRouter from './AppRouter/AppRouter';
-import Header from './Header/Header';
-import Footer from './Footer/Footer';
-import Layout from './Layout/Layout';
+import Router from './Router/Router';
+import Header from './AppHeader/AppHeader';
+import Footer from './AppFooter/Footer';
+import Layout from './MainLayout/MainLayout';
 
-export { AppRouter, Header, Footer, Layout };
+export { Router, Header, Footer, Layout };
 export * from './App/App';

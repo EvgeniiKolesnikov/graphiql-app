@@ -2,13 +2,13 @@ import MainPage from '../../pages/MainPage';
 import NotFoundPage from '../../pages/NotFoundPage';
 import WelcomePage from '../../pages/WelcomePage';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { Layout } from '..';
+import MainLayout from '../MainLayout/MainLayout';
 
-const AppRouter = () => {
+const Router = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<MainLayout />}>
           <Route index element={<WelcomePage />} />
           <Route path="main" element={<MainPage />} />
           <Route path="404" element={<NotFoundPage />} />
@@ -19,4 +19,4 @@ const AppRouter = () => {
   );
 };
 
-export default AppRouter;
+export default Router;

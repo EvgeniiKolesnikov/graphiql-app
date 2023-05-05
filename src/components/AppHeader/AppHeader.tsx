@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import handleActiveLink from '../../utils/hadleActiveLink';
-import s from './Header.module.scss';
+import s from './AppHeader.module.scss';
 
 const Header = () => {
   const links = [
