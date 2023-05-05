@@ -16,9 +16,9 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      assets: './src/assets',
-      components: './src/components',
-      pages: './src/pages',
+      assets: '/src/assets',
+      components: '/src/components',
+      pages: '/src/pages',
     },
   },
 });

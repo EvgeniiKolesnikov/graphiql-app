@@ -8,3 +8,7 @@
 // export { Component1, Component2 };
 
 export * from './App/App';
+export * from './AppFooter/AppFooter';
+export * from './AppHeader/AppHeader';
+export * from './Router/Router';
+export * from './MainLayout/MainLayout';

@@ -1,9 +1,5 @@
-import './App.scss';
+import Router from '../Router/Router';
 
 export const App = () => {
-  return (
-    <>
-      <h1>GraphiQL App</h1>
-    </>
-  );
+  return <Router />;
 };

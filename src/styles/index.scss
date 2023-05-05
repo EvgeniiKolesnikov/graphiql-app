@@ -1,5 +1,4 @@
-@import "normalize.css";
+@charset "UTF-8";
+@use 'abstracts' as *;
+@use 'base' as *;
 
-@import "./fonts";
-@import "./vars";
-@import "./reset";

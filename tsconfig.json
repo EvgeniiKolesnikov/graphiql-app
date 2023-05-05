@@ -6,11 +6,9 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowJs": false,
-
     "useDefineForClassFields": true,
-
     "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
+    // "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -18,7 +16,6 @@
     "noImplicitAny": true,
     "jsx": "react-jsx",
     "outDir": "dist",
-
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
