@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import handleActiveLink from '../../utils/hadleActiveLink';
 import s from './AppHeader.module.scss';
 
-const Header = () => {
+export const AppHeader = () => {
   const links = [
     { id: 1, title: 'Welcome', link: '/' },
     { id: 2, title: 'Main', link: 'main' },
@@ -34,5 +34,3 @@ const Header = () => {
     </>
   );
 };
-
-export default Header;

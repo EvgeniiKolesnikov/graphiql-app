@@ -1,8 +1,9 @@
-import MainPage from 'pages/MainPage';
-import NotFoundPage from 'pages/NotFoundPage';
-import WelcomePage from 'pages/WelcomePage';
+import { MainPage } from 'pages/MainPage';
+import { NotFoundPage } from 'pages/NotFoundPage';
+import { WelcomePage } from 'pages/WelcomePage';
+
 import { Navigate, Route, Routes } from 'react-router-dom';
-import MainLayout from '../MainLayout/MainLayout';
+import { MainLayout } from '..';
 
 const Router = () => {
   return (

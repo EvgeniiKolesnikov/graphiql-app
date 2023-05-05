@@ -1,14 +1,12 @@
 import { Outlet } from 'react-router-dom';
-import { Footer, Header } from '..';
+import { AppFooter, AppHeader } from '..';
 
-const MainLayout = () => {
+export const MainLayout = () => {
   return (
     <>
-      <Header />
+      <AppHeader />
       <Outlet />
-      <Footer />
+      <AppFooter />
     </>
   );
 };
-
-export default MainLayout;
