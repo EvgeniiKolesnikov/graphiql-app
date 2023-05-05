@@ -11,7 +11,7 @@ export const AppHeader = () => {
   return (
     <>
       <header className={s.header}>
-        <div className={s.container}>
+        <div className={`${s.wrapper} ${s.container}`}>
           <nav className={s.menu}>
             <ul className={s.menu__list}>
               {links.map(({ id, title, link }) => {

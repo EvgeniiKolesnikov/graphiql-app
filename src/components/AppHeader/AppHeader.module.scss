@@ -1,9 +1,23 @@
 @use '../../styles/abstracts' as *;
 
+
 .header {
   padding: 1rem 0;
+  height: 100%;
+  min-height: 5rem;
+  background: $grey-color;
 }
 .container {
+  width: 100%;
+  max-width: $max-width;
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  @include maxQ-mobile {
+    padding: 0 1rem;
+  }
+}
+.wrapper{
   display: flex;
   justify-content: space-between;
 }
