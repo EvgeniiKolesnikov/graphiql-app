@@ -18,6 +18,10 @@ body {
   color: $dark-color;
 }
 
+main {
+  flex: 1 1 auto;
+}
+
 .container {
   width: 100%;
   max-width: $max-width;
@@ -33,5 +37,5 @@ body {
   margin: 0;
   min-height: 100vh;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
 }
