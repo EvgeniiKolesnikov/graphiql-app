@@ -1,10 +1,10 @@
 import s from './SignPage.module.scss';
-import { SignForm } from 'components/SignForm/SignForm';
+import { SignContainer } from 'components/SignContainer/SignContainer';
 
 export const SignPage = () => {
   return (
     <div>
-      <SignForm />
+      <SignContainer />
     </div>
   );
 };

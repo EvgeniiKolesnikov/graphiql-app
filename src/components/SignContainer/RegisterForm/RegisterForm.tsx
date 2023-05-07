@@ -1,4 +1,3 @@
-import s from './SignForm.module.scss';
 import z from 'zod';
 import { TextInput, PasswordInput, Button, Container } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
@@ -30,7 +29,7 @@ const schema = z
     message: 'Passwords do not match',
   });
 
-export const SignForm = () => {
+export const RegisterForm = () => {
   const form = useForm({
     initialValues: { login: '', password: '', repeatPassword: '', email: '' },
     validate: zodResolver(schema),
@@ -41,36 +40,34 @@ export const SignForm = () => {
   };
 
   return (
-    <Container size={'sm'}>
-      <form onSubmit={form.onSubmit(onSubmit)}>
-        <TextInput
-          size="xl"
-          placeholder="Your login"
-          label="Login"
-          {...form.getInputProps('login')}
-        />
-        <PasswordInput
-          size="xl"
-          placeholder="Your password"
-          label="Password"
-          {...form.getInputProps('password')}
-        />
-        <PasswordInput
-          size="xl"
-          placeholder="Repeat your password"
-          label="Repeat password"
-          {...form.getInputProps('repeatPassword')}
-        />
-        <TextInput
-          size="xl"
-          placeholder="Your email"
-          label="Email"
-          {...form.getInputProps('email')}
-        />
-        <Button size="lg" type="submit" fullWidth uppercase variant="outline">
-          Submit
-        </Button>
-      </form>
-    </Container>
+    <form onSubmit={form.onSubmit(onSubmit)}>
+      <TextInput
+        size="xl"
+        placeholder="Your login"
+        label="Login"
+        {...form.getInputProps('login')}
+      />
+      <PasswordInput
+        size="xl"
+        placeholder="Your password"
+        label="Password"
+        {...form.getInputProps('password')}
+      />
+      <PasswordInput
+        size="xl"
+        placeholder="Repeat your password"
+        label="Repeat password"
+        {...form.getInputProps('repeatPassword')}
+      />
+      <TextInput
+        size="xl"
+        placeholder="Your email"
+        label="Email"
+        {...form.getInputProps('email')}
+      />
+      <Button size="lg" type="submit" fullWidth uppercase variant="outline">
+        Submit
+      </Button>
+    </form>
   );
 };
