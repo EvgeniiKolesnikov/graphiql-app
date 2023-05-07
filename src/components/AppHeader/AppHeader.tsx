@@ -5,6 +5,7 @@ import s from './AppHeader.module.scss';
 const links = [
   { id: 1, title: 'Welcome', link: '/' },
   { id: 2, title: 'Main', link: 'main' },
+  { id: 3, title: 'SignIn/SignUp', link: 'sign' },
 ];
 
 export const AppHeader = () => {
