@@ -9,11 +9,11 @@ const links = [
     label: 'Evgenii Kolesnikov',
   },
   {
-    link: 'https://github.com/EvgeniiKolesnikov',
+    link: 'https://github.com/YanaPronko',
     label: 'Yana Pranko',
   },
   {
-    link: 'https://github.com/EvgeniiKolesnikov',
+    link: 'https://github.com/bp26',
     label: 'Aliaksey Kashirsky',
   },
 ];
@@ -26,7 +26,7 @@ export const AppFooter = () => {
         className={s.link}
         color="dimmed"
         href={link.link}
-        onClick={(event) => event.preventDefault()}
+        target="_blank"
         size="sm"
         ml={'0.5rem'}
         fz={'1.6rem'}
@@ -50,7 +50,7 @@ export const AppFooter = () => {
                 className={s.link}
                 color="dimmed"
                 href="https://rs.school/react"
-                onClick={(event) => event.preventDefault()}
+                target="_blank"
                 size="sm"
                 fz={'1.6rem'}
               >
