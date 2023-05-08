@@ -11,13 +11,11 @@ const links = [
 
 export const AppHeader = () => {
   const [sticky, setSticky] = useState(false);
-  console.log(sticky);
 
   useEffect(() => {
     const handleScroll = () => {
-      setSticky(window.scrollY > 100);
+      setSticky(window.scrollY > 80);
     };
-    console.log(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   });

@@ -7,7 +7,7 @@ import { MainLayout } from '..';
 
 const Router = () => {
   return (
-    <div>
+    <>
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<WelcomePage />} />
@@ -16,7 +16,7 @@ const Router = () => {
           <Route path="*" element={<Navigate to="/404" replace />} />
         </Route>
       </Routes>
-    </div>
+    </>
   );
 };
 
