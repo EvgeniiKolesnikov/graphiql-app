@@ -1,11 +1,11 @@
+import notFound from 'assets/notFound.jpg';
+
 export const NotFoundPage = () => {
   return (
     <main>
       <div className="container">
-        <div className="notFound__wrap">
-          <h1 className="notFound__title">404</h1>
-          <h2 className="notFound__title">Not Found</h2>
-        </div>
+        <img src={notFound} alt="404 image" className="notFound" />
+        <h1 className="title">Not Found</h1>
       </div>
     </main>
   );

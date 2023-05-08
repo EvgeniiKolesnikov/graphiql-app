@@ -36,6 +36,14 @@ main {
   @include font(2.5rem, 130%, 700);
   text-align: center;
 }
+
+.notFound {
+  display: block;
+  margin: 0 auto;
+  width: 50vw;
+  height: 60vh;
+}
+
 #root {
   position: relative;
   display: flex;
