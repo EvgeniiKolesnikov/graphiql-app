@@ -1,9 +1,14 @@
 @use '../../styles/abstracts' as *;
 
 .header {
+  @extend %transition;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
   padding: 1rem 0;
-  height: 100%;
-  min-height: 5rem;
+  min-height: 6rem;
   background: $grey-color;
 }
 
@@ -21,9 +26,16 @@
 .wrapper{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+.btn__wrapper {
+  display: flex;
+  gap: 1rem;
 }
 
+
 .menu {
+  margin-right: auto;
   &__list {
     display: flex;
     justify-content: space-between;
@@ -32,11 +44,16 @@
     line-height: 3.2rem;
   }
   &__link {
+    @extend %transition;
     text-decoration: none;
+    color: $light-color;
+    &:hover{
+      color: $main-color;
+    }
   }
 }
 
-.list__item {
+.list__item:not(:first-child) {
   @extend %transition;
   margin: 0 0.8rem;
   &:hover {
@@ -46,4 +63,21 @@
 
 .menu__link_active {
   color: $main-color;
+}
+
+.sticky {
+  position: fixed;
+  min-height: 3rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  animation: header 0.5s ease-out;
+}
+
+@keyframes header {
+  from{
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }

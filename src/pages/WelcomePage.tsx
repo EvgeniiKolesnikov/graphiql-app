@@ -1,8 +1,11 @@
+import { Cards } from 'components/Cards/Cards';
+
 export const WelcomePage = () => {
   return (
     <main>
       <div className="container">
-        <h1>WELCOME</h1>
+        <h1 className="title">Our team</h1>
+        <Cards />
       </div>
     </main>
   );

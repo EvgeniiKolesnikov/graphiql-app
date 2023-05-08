@@ -32,6 +32,10 @@ main {
     padding: 0 1rem;
   }
 }
+.title {
+  @include font(2.5rem, 130%, 700);
+  text-align: center;
+}
 
 #root {
   margin: 0;
