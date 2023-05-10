@@ -6,7 +6,7 @@ export const MainLayout = () => {
   return (
     <MantineProvider withGlobalStyles theme={{ fontFamily: 'Roboto, sans-serif' }}>
       <AppHeader />
-      <main className="container">
+      <main className="container sticky">
         <Outlet />
       </main>
       <AppFooter />

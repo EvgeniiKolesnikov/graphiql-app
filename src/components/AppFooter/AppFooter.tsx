@@ -21,7 +21,6 @@ const links = [
 export const AppFooter = () => {
   const items = links.map((link) => (
     <div className={s.link} key={link.label}>
-      <IconBrandGithubFilled href={link.link} />
       <Anchor<'a'>
         className={s.link}
         color="dimmed"
@@ -31,6 +30,7 @@ export const AppFooter = () => {
         ml={'0.5rem'}
         fz={'1.6rem'}
       >
+        <IconBrandGithubFilled href={link.link} />
         {link.label}
       </Anchor>
     </div>
@@ -45,16 +45,16 @@ export const AppFooter = () => {
           <div className={s.links__group}>
             {items}
             <div className={s.link}>
-              <img className={s.logo} src={rss} alt="RSSchool logo" width={50} height={30} />
               <Anchor<'a'>
                 className={s.link}
                 color="dimmed"
                 href="https://rs.school/react"
                 target="_blank"
                 size="sm"
+                ml={'0.5rem'}
                 fz={'1.6rem'}
               >
-                RS SCHOOL
+                <img className={s.logo} src={rss} alt="RSSchool logo" width={50} height={30} />
               </Anchor>
             </div>
           </div>

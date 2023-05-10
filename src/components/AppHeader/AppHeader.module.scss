@@ -2,32 +2,36 @@
 
 .header {
   @extend %transition;
+  position: fixed;
+  top: 0;
+  width: 100%;
   padding: 1rem 0;
-  min-height: 6rem;
-  background: $grey-color;
+  z-index: 100;
+  background: $light-color;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.6);
 }
 
 .container {
   width: 100%;
   max-width: $max-width;
   padding: 0 2rem;
-  margin: 0 auto;
+  margin: 0rem auto;
 
   @include maxQ-mobile {
-    padding: 0 1rem;
+    padding: 0rem 1rem;
   }
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .btn__wrapper {
   display: flex;
   gap: 1rem;
 }
-
 
 .menu {
   margin-right: auto;
@@ -41,11 +45,15 @@
   &__link {
     @extend %transition;
     text-decoration: none;
-    color: $light-color;
-    &:hover{
+    color: $dark-color;
+    &:hover {
       color: $main-color;
     }
   }
+}
+
+.menu__link_sticky {
+  color: $light-color;
 }
 
 .list__item:not(:first-child) {
@@ -61,22 +69,7 @@
 }
 
 .sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  min-height: 3rem;
-  z-index: 100;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
   backdrop-filter: blur(10px);
-  animation: header 0.5s ease-out;
-}
-
-@keyframes header {
-  from{
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
+  background: $grey-color;
 }

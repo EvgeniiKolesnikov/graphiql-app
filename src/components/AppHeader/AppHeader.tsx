@@ -1,7 +1,7 @@
 import { Btn } from 'components/Button/Button';
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import handleActiveLink from '../../utils/hadleActiveLink';
+import handleLink from '../../utils/hadleLink';
 import s from './AppHeader.module.scss';
 
 const links = [
@@ -14,7 +14,7 @@ export const AppHeader = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setSticky(window.scrollY > 80);
+      setSticky(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -30,7 +30,7 @@ export const AppHeader = () => {
                 <li className={s.list__item} key={id}>
                   <NavLink
                     end
-                    className={({ isActive }) => handleActiveLink(isActive, s)}
+                    className={({ isActive }) => handleLink(isActive, s, sticky)}
                     to={link}
                   >
                     {title}
