@@ -12,24 +12,44 @@
 html {
   font-size: 10px;
 }
+
 body {
   @include font(1.4rem, 120%);
   color: $dark-color;
 }
 
+main {
+  flex: 1 1 auto;
+}
+
+.container.sticky {
+  margin: 5rem auto;
+}
 .container {
   width: 100%;
   max-width: $max-width;
   padding: 0 2rem;
-  margin: 0 auto;
+  margin: 0rem auto;
 
   @include maxQ-mobile {
-    padding: 0 1rem;
+    padding: 0rem 1rem;
   }
 }
+.title {
+  @include font(2.5rem, 130%, 700);
+  text-align: center;
+}
+
+.notFound {
+  display: block;
+  margin: 0 auto;
+  width: 50vw;
+  height: 60vh;
+}
+
 #root {
-  margin: 0;
-  min-height: 100vh;
+  position: relative;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  height: 100vh;
 }
