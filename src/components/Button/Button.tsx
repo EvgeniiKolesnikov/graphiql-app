@@ -8,7 +8,7 @@ type BtnProps = {
 
 export const Btn: FC<BtnProps> = ({ text }) => {
   return (
-    <Button color="grape" size="md" uppercase className={s.btn}>
+    <Button color="grape" size="lg" uppercase className={s.btn}>
       {text}
     </Button>
   );

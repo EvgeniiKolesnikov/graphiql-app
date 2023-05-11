@@ -1,7 +1,9 @@
 import { Grid, Card, Image, Text, Group } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
 import s from './Card.module.scss';
 
 export const Cards = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Grid justify="space-around">
@@ -16,7 +18,7 @@ export const Cards = () => {
             </Card.Section>
             <Group position="apart" mt="md" mb="xs">
               <Text size="2rem" weight={700}>
-                Evgenii Kolesnikov
+                {t('Evgenii Kolesnikov')}
               </Text>
             </Group>
             <Text size="1.6rem" className={s.text}>
@@ -36,7 +38,7 @@ export const Cards = () => {
             </Card.Section>
             <Group position="apart" mt="md" mb="xs">
               <Text size="2rem" weight={700}>
-                Aliaksey Kashirsky
+                {t('Aliaksey Kashirsky')}
               </Text>
             </Group>
             <Text size="1.6rem" className={s.text}>
@@ -56,7 +58,7 @@ export const Cards = () => {
             </Card.Section>
             <Group position="apart" mt="md" mb="xs">
               <Text size="2rem" weight={700}>
-                Yana Pranko
+                {t('Yana Pranko')}
               </Text>
             </Group>
             <Text size="1.6rem" className={s.text}>

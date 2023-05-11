@@ -1,3 +1,16 @@
 {
-  "Welcome to React": "Welcome to React"
+  "English": "English",
+  "Russian": "Russian",
+  "Sign in": "Sign in",
+  "Sign up": "Sign up",
+  "Welcome": "Welcome",
+  "Start": "Start",
+  "Home": "Home",
+  "Main": "Main",
+  "Evgenii Kolesnikov": "Evgenii Kolesnikov",
+  "Yana Pranko": "Yana Pranko",
+  "Aliaksey Kashirsky": "Aliaksey Kashirsky",
+  "All rights reserved": "All rights reserved",
+  "Our team": "Our team",
+  "Not Found": "Not Found"
 }

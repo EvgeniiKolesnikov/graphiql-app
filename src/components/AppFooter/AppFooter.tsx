@@ -1,5 +1,7 @@
 import { Anchor, Text } from '@mantine/core';
 import { IconBrandGithubFilled } from '@tabler/icons-react';
+import { useTranslation } from 'react-i18next';
+
 import rss from 'assets/rss.svg';
 import s from './AppFooter.module.scss';
 
@@ -19,6 +21,7 @@ const links = [
 ];
 
 export const AppFooter = () => {
+  const { t } = useTranslation();
   const items = links.map((link) => (
     <div className={s.link} key={link.label}>
       <Anchor<'a'>
@@ -31,7 +34,7 @@ export const AppFooter = () => {
         fz={'1.6rem'}
       >
         <IconBrandGithubFilled href={link.link} />
-        {link.label}
+        {t(link.label)}
       </Anchor>
     </div>
   ));
@@ -40,7 +43,7 @@ export const AppFooter = () => {
       <div className="container">
         <div className={s.inner}>
           <Text className={s.text} color="dimmed">
-            © 2023. All rights reserved.
+            © 2023. {t('All rights reserved')}.
           </Text>
           <div className={s.links__group}>
             {items}

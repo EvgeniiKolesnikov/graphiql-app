@@ -15,7 +15,7 @@
   width: 100%;
   max-width: $max-width;
   padding: 0 2rem;
-  margin: 0rem auto;
+  margin: 0 auto;
 
   @include maxQ-mobile {
     padding: 0rem 1rem;
@@ -25,7 +25,14 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
 }
 
 .btn__wrapper {
