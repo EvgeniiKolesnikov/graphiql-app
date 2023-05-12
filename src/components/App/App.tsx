@@ -5,7 +5,7 @@ import Router from '../Router/Router';
 export const App = () => {
   return (
     <Suspense fallback={<Spinner />}>
-      <Router />;
+      <Router />
     </Suspense>
   );
 };

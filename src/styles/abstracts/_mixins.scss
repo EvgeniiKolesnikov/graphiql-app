@@ -58,6 +58,21 @@
     @content;
   }
 }
+
+// 600
+
+@mixin maxQ-sm-tablet {
+  @media (max-width: $break-s) {
+    @content;
+  }
+}
+
+@mixin minQ-sm-tablet {
+  @media (min-width: $break-s) {
+    @content;
+  }
+}
+
 // 320
 
 @mixin maxQ-mobile {

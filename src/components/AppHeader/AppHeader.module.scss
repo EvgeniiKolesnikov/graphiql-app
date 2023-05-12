@@ -28,7 +28,7 @@
   align-items: center;
   flex-wrap: wrap;
 
-  @media (max-width: 600px) {
+  @include maxQ-sm-tablet {
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
@@ -37,6 +37,8 @@
 
 .btn__wrapper {
   display: flex;
+  width: 25rem;
+  justify-content: flex-end;
   gap: 1rem;
 }
 
