@@ -8,9 +8,9 @@ export const useLogin = () => {
 
   const login = async (email: string, password: string) => {
     try {
+      setError('');
       setIsLoading(true);
       await signInWithEmailAndPassword(auth, email, password);
-      setError('');
     } catch (error: unknown) {
       if (error instanceof Error) {
         setError(error.message);

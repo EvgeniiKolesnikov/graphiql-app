@@ -9,6 +9,7 @@ export const useRegister = () => {
 
   const register = async (login: string, email: string, password: string) => {
     try {
+      setError('');
       setIsLoading(true);
       const { user } = await createUserWithEmailAndPassword(auth, email, password);
       await addDoc(collection(db, 'users'), {
@@ -17,7 +18,6 @@ export const useRegister = () => {
         authProvider: 'local',
         email,
       });
-      setError('');
     } catch (error) {
       if (error instanceof Error) {
         setError(error.message);
