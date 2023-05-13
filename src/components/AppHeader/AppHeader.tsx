@@ -1,4 +1,3 @@
-import { Btn } from 'components/Button/Button';
 import { LangSwitcher } from 'components/LangSwittcher/LangSwitcher';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -9,7 +8,6 @@ import s from './AppHeader.module.scss';
 const links = [
   { id: 1, title: 'Home', link: '/' },
   { id: 2, title: 'Main', link: 'main' },
-  { id: 3, title: 'SignIn/SignUp', link: 'sign' },
 ];
 
 export const AppHeader = () => {
@@ -46,8 +44,12 @@ export const AppHeader = () => {
         </nav>
         <LangSwitcher />
         <div className={s.btn__wrapper}>
-          <Btn text={`${t('Sign in')}`} />
-          <Btn text={`${t('Sign up')}`} />
+          <NavLink to={'/sign'} state={{ isRegister: true }}>
+            Sign Up
+          </NavLink>
+          <NavLink to={'/sign'} state={{ isRegister: false }}>
+            Sign In
+          </NavLink>
         </div>
       </div>
     </header>
