@@ -1,39 +1,16 @@
 import { initializeApp } from 'firebase/app';
-import {
-  getAuth,
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-  signOut,
-} from 'firebase/auth';
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
-import { firebaseConfig } from './config';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyCxqVzlyRz9J6NBOoHr6c6YwmxGoaSFGHg',
+  authDomain: 'graphiql-app-4af7f.firebaseapp.com',
+  projectId: 'graphiql-app-4af7f',
+  storageBucket: 'graphiql-app-4af7f.appspot.com',
+  messagingSenderId: '812480364456',
+  appId: '1:812480364456:web:dbb2c97bc56c083315679d',
+};
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-
-export const register = async (login: string, email: string, password: string) => {
-  try {
-    const { user } = await createUserWithEmailAndPassword(auth, email, password);
-    await addDoc(collection(db, 'users'), {
-      uid: user.uid,
-      login,
-      authProvider: 'local',
-      email,
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export const login = async (email: string, password: string) => {
-  try {
-    await signInWithEmailAndPassword(auth, email, password);
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export const logout = async () => {
-  signOut(auth);
-};
+export const auth = getAuth(app);
+export const db = getFirestore(app);
