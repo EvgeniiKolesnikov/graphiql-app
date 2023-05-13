@@ -2,8 +2,11 @@ import { LangSwitcher } from 'components/LangSwittcher/LangSwitcher';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import handleLink from '../../utils/hadleLink';
 import s from './AppHeader.module.scss';
+import { auth } from '../../firebase/firebase';
+import { signOut } from 'firebase/auth';
 
 const links = [
   { id: 1, title: 'Home', link: '/' },
@@ -12,6 +15,7 @@ const links = [
 
 export const AppHeader = () => {
   const [sticky, setSticky] = useState(false);
+  const [user] = useAuthState(auth);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -21,6 +25,28 @@ export const AppHeader = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   });
+
+  let authButtons;
+  if (!user) {
+    authButtons = (
+      <div className={s.btn__wrapper}>
+        <NavLink to={'/sign'} state={{ isRegister: true }}>
+          Sign Up
+        </NavLink>
+        <NavLink to={'/sign'} state={{ isRegister: false }}>
+          Sign In
+        </NavLink>
+      </div>
+    );
+  } else {
+    authButtons = (
+      <div className={s.btn__wrapper}>
+        <NavLink to={'/'} onClick={() => signOut(auth)}>
+          Sign Out
+        </NavLink>
+      </div>
+    );
+  }
 
   return (
     <header className={`${s.header} ${sticky ? s.sticky : ''}`}>
@@ -43,14 +69,7 @@ export const AppHeader = () => {
           </ul>
         </nav>
         <LangSwitcher />
-        <div className={s.btn__wrapper}>
-          <NavLink to={'/sign'} state={{ isRegister: true }}>
-            Sign Up
-          </NavLink>
-          <NavLink to={'/sign'} state={{ isRegister: false }}>
-            Sign In
-          </NavLink>
-        </div>
+        {authButtons}
       </div>
     </header>
   );
