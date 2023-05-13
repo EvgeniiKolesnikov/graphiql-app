@@ -22,8 +22,11 @@ main {
   flex: 1 1 auto;
 }
 
-.container.sticky {
-  margin: 5rem auto;
+.container.fixed {
+  margin: 5rem auto 3rem;
+  @include maxQ-sm-tablet {
+    margin: 13rem auto 3rem;
+  }
 }
 .container {
   width: 100%;
