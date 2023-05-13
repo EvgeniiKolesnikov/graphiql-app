@@ -12,3 +12,6 @@ export * from './AppFooter/AppFooter';
 export * from './AppHeader/AppHeader';
 export * from './Router/Router';
 export * from './MainLayout/MainLayout';
+export * from './Button/Button';
+export * from './Cards/Cards';
+export * from './Spinner/Spinner';

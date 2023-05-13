@@ -1,0 +1,8 @@
+@use '../../styles/abstracts' as *;
+
+.switcher {
+  @extend %transition;
+  margin-right: 2rem;
+  width: 15rem;
+  border: solid 0.5px #f3a2f9;
+}
