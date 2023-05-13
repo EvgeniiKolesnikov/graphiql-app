@@ -1,17 +1,20 @@
 import { Btn } from 'components/Button/Button';
+import { LangSwitcher } from 'components/LangSwittcher/LangSwitcher';
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import handleLink from '../../utils/hadleLink';
 import s from './AppHeader.module.scss';
 
 const links = [
-  { id: 1, title: 'Welcome', link: '/' },
+  { id: 1, title: 'Home', link: '/' },
   { id: 2, title: 'Main', link: 'main' },
   { id: 3, title: 'SignIn/SignUp', link: 'sign' },
 ];
 
 export const AppHeader = () => {
   const [sticky, setSticky] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,16 +37,17 @@ export const AppHeader = () => {
                     className={({ isActive }) => handleLink(isActive, s, sticky)}
                     to={link}
                   >
-                    {title}
+                    {t(title)}
                   </NavLink>
                 </li>
               );
             })}
           </ul>
         </nav>
+        <LangSwitcher />
         <div className={s.btn__wrapper}>
-          <Btn text={'Sign in'} />
-          <Btn text={'Sign up'} />
+          <Btn text={`${t('Sign in')}`} />
+          <Btn text={`${t('Sign up')}`} />
         </div>
       </div>
     </header>

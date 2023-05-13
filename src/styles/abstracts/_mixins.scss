@@ -1,6 +1,6 @@
 @use '../abstracts/variables' as *;
 
-@mixin font ($size, $height, $weight: normal, $style: normal) {
+@mixin font($size, $height, $weight: normal, $style: normal) {
   font-size: $size;
   font-style: $style;
   font-weight: $weight;
@@ -58,6 +58,21 @@
     @content;
   }
 }
+
+// 600
+
+@mixin maxQ-sm-tablet {
+  @media (max-width: $break-s) {
+    @content;
+  }
+}
+
+@mixin minQ-sm-tablet {
+  @media (min-width: $break-s) {
+    @content;
+  }
+}
+
 // 320
 
 @mixin maxQ-mobile {
