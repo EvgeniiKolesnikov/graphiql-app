@@ -1,4 +1,4 @@
-import { SignContainer } from 'components/SignContainer/SignContainer';
+import { SignContainer } from 'components';
 
 export const SignPage = () => {
   return (
