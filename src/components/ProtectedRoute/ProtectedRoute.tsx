@@ -1,13 +1,17 @@
 import { PropsWithChildren, Fragment } from 'react';
 import { Navigate } from 'react-router-dom';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from '../../firebase/firebase';
+import { useAuth } from '../../hooks/auth/useAuth';
 
-const ProtectedRoute = ({ children }: PropsWithChildren) => {
-  const [user] = useAuthState(auth);
+interface Props extends PropsWithChildren {
+  protectSigned: boolean;
+  defaultRoute: string;
+}
 
-  if (!user) {
-    return <Navigate to="/" replace />;
+const ProtectedRoute = ({ protectSigned, defaultRoute, children }: Props) => {
+  const { user } = useAuth();
+
+  if ((protectSigned && !user) || (!protectSigned && user)) {
+    return <Navigate to={defaultRoute} replace />;
   }
 
   return <Fragment>{children}</Fragment>;
