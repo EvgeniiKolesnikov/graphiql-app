@@ -70,6 +70,7 @@ export const AppHeader = () => {
           </ul>
         </nav>
         <LangSwitcher />
+        {user && <span>{user.email}</span>}
         {authButtons}
       </div>
     </header>
