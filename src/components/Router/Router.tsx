@@ -1,7 +1,4 @@
-import { MainPage } from 'pages/MainPage';
-import { NotFoundPage } from 'pages/NotFoundPage';
-import { WelcomePage } from 'pages/WelcomePage';
-import { SignPage } from '../../pages/SignPage';
+import { MainPage, NotFoundPage, SignPage, WelcomePage } from 'pages';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { MainLayout } from '..';
 
