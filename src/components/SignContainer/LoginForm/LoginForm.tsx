@@ -39,7 +39,7 @@ export const LoginForm = () => {
   }, [error]);
 
   if (user) {
-    return <Navigate to="/main" />;
+    return <Navigate to="/main" replace />;
   }
 
   return (
