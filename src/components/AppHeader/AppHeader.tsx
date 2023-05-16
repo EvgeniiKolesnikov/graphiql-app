@@ -7,6 +7,7 @@ import handleLink from '../../utils/hadleLink';
 import s from './AppHeader.module.scss';
 import { auth } from '../../firebase/firebase';
 import { signOut } from 'firebase/auth';
+import { Btn } from '..';
 
 const links = [
   { id: 1, title: 'Home', link: '/' },
@@ -31,10 +32,10 @@ export const AppHeader = () => {
     authButtons = (
       <div className={s.btn__wrapper}>
         <NavLink to={'/sign'} state={{ isRegister: true }}>
-          Sign Up
+          <Btn text={t('Sign up')} />
         </NavLink>
         <NavLink to={'/sign'} state={{ isRegister: false }}>
-          Sign In
+          <Btn text={t('Sign in')} />
         </NavLink>
       </div>
     );
@@ -42,7 +43,7 @@ export const AppHeader = () => {
     authButtons = (
       <div className={s.btn__wrapper}>
         <NavLink to={'/'} onClick={() => signOut(auth)}>
-          Sign Out
+          <Btn text={t('Sign out')} />
         </NavLink>
       </div>
     );
