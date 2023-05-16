@@ -1,8 +1,7 @@
 import { TextInput, PasswordInput, Button, LoadingOverlay } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { schema } from './schema';
-import { auth } from '../../../firebase/firebase';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { useAuth } from '../../../hooks/auth/useAuth';
 import { Navigate } from 'react-router-dom';
 import { useRegister } from '../../../hooks/auth/useRegister';
 import s from './RegisterForm.module.scss';
@@ -18,7 +17,7 @@ interface IFormValues {
 }
 
 export const RegisterForm = () => {
-  const [user] = useAuthState(auth);
+  const { user } = useAuth();
   const { register, isLoading, error } = useRegister();
   const { t } = useTranslation();
 
