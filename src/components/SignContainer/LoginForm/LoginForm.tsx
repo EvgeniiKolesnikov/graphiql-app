@@ -8,6 +8,7 @@ import { Navigate } from 'react-router-dom';
 import { schema } from './schema';
 import { Fragment, useEffect } from 'react';
 import { notifications } from '@mantine/notifications';
+import { useTranslation } from 'react-i18next';
 
 interface IFormValues {
   email: string;
@@ -21,6 +22,7 @@ export const LoginForm = () => {
     initialValues: { email: '', password: '' },
     validate: zodResolver(schema),
   });
+  const { t } = useTranslation();
 
   const onSubmit = (data: IFormValues) => {
     const { email, password } = data;
@@ -44,22 +46,12 @@ export const LoginForm = () => {
     <Fragment>
       <form onSubmit={form.onSubmit(onSubmit)} className={s.form}>
         <fieldset className={s.inputs}>
-          <TextInput
-            size="xl"
-            placeholder="Your email"
-            label="Email"
-            {...form.getInputProps('email')}
-          />
-          <PasswordInput
-            size="xl"
-            placeholder="Your password"
-            label="Password"
-            {...form.getInputProps('password')}
-          />
+          <TextInput size="xl" label={t('Email')} {...form.getInputProps('email')} />
+          <PasswordInput size="xl" label={t('Password')} {...form.getInputProps('password')} />
         </fieldset>
 
         <Button color="grape" size="lg" type="submit" fullWidth uppercase>
-          Submit
+          {t('Submit')}
         </Button>
       </form>
 

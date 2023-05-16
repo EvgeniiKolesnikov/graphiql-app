@@ -8,6 +8,7 @@ import { useRegister } from '../../../hooks/auth/useRegister';
 import s from './RegisterForm.module.scss';
 import { Fragment, useEffect } from 'react';
 import { notifications } from '@mantine/notifications';
+import { useTranslation } from 'react-i18next';
 
 interface IFormValues {
   login: string;
@@ -19,6 +20,7 @@ interface IFormValues {
 export const RegisterForm = () => {
   const [user] = useAuthState(auth);
   const { register, isLoading, error } = useRegister();
+  const { t } = useTranslation();
 
   const form = useForm({
     initialValues: { login: '', password: '', repeatPassword: '', email: '' },
@@ -47,34 +49,18 @@ export const RegisterForm = () => {
     <Fragment>
       <form onSubmit={form.onSubmit(onSubmit)} className={s.form}>
         <fieldset className={s.inputs}>
-          <TextInput
-            size="xl"
-            placeholder="Your login"
-            label="Login"
-            {...form.getInputProps('login')}
-          />
-          <TextInput
-            size="xl"
-            placeholder="Your email"
-            label="Email"
-            {...form.getInputProps('email')}
-          />
+          <TextInput size="xl" label={t('Login')} {...form.getInputProps('login')} />
+          <TextInput size="xl" label={t('Email')} {...form.getInputProps('email')} />
+          <PasswordInput size="xl" label={t('Password')} {...form.getInputProps('password')} />
           <PasswordInput
             size="xl"
-            placeholder="Your password"
-            label="Password"
-            {...form.getInputProps('password')}
-          />
-          <PasswordInput
-            size="xl"
-            placeholder="Repeat your password"
-            label="Repeat password"
+            label={t('Repeat password')}
             {...form.getInputProps('repeatPassword')}
           />
         </fieldset>
 
         <Button color="grape" size="lg" type="submit" fullWidth uppercase>
-          Submit
+          {t('Submit')}
         </Button>
       </form>
 
