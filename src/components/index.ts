@@ -15,3 +15,4 @@ export * from './MainLayout/MainLayout';
 export * from './Button/Button';
 export * from './Cards/Cards';
 export * from './Spinner/Spinner';
+export * from './SignContainer/SignContainer';
