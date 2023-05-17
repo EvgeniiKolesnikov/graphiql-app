@@ -24,6 +24,9 @@
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "firebase": "^9.21.0",
+    "graphql": "^16.6.0",
+    "graphql-docs": "^0.2.0",
+    "graphql-tools": "^8.3.20",
     "i18next": "^22.4.15",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.2.0",
@@ -36,6 +39,7 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.11.1",
     "redux-persist": "^6.0.0",
+    "spectaql": "^2.0.8",
     "vite-plugin-stylelint": "^4.3.0",
     "vite-plugin-svgr": "^3.2.0"
   },

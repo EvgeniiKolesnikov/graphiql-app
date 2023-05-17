@@ -1,5 +1,5 @@
 import { Btn } from 'components/Button/Button';
-import { LangSwitcher } from 'components/LangSwittcher/LangSwitcher';
+import { LangSwitcher } from 'components/LangSwitcher/LangSwitcher';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
