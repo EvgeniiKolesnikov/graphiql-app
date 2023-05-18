@@ -1,8 +1,6 @@
 import { TextInput, PasswordInput, Button, LoadingOverlay } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { schema } from './schema';
-import { useAuth } from '../../../hooks/auth/useAuth';
-import { Navigate } from 'react-router-dom';
 import { useRegister } from '../../../hooks/auth/useRegister';
 import s from './RegisterForm.module.scss';
 import { Fragment, useEffect } from 'react';
@@ -17,7 +15,6 @@ interface IFormValues {
 }
 
 export const RegisterForm = () => {
-  const { user } = useAuth();
   const { register, isLoading, error } = useRegister();
   const { t } = useTranslation();
 
@@ -39,10 +36,6 @@ export const RegisterForm = () => {
       });
     }
   }, [error]);
-
-  if (user) {
-    return <Navigate to="/main" replace />;
-  }
 
   return (
     <Fragment>

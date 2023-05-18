@@ -1,9 +1,7 @@
 import s from './LoginForm.module.scss';
 import { TextInput, PasswordInput, Button, LoadingOverlay } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
-import { useAuth } from '../../../hooks/auth/useAuth';
 import { useLogin } from '../../../hooks/auth/useLogin';
-import { Navigate } from 'react-router-dom';
 import { schema } from './schema';
 import { Fragment, useEffect } from 'react';
 import { notifications } from '@mantine/notifications';
@@ -15,7 +13,6 @@ interface IFormValues {
 }
 
 export const LoginForm = () => {
-  const { user } = useAuth();
   const { login, isLoading, error } = useLogin();
   const form = useForm({
     initialValues: { email: '', password: '' },
@@ -36,10 +33,6 @@ export const LoginForm = () => {
       });
     }
   }, [error]);
-
-  if (user) {
-    return <Navigate to="/main" replace />;
-  }
 
   return (
     <Fragment>
