@@ -27,6 +27,7 @@ export const resources = {
       },
       custom: {
         repeat: `Passwords don't match`,
+        passwordRules: `Password must contain at least 1 letter, 1 digit, 1 special character`,
       },
     },
     ru: {
@@ -56,6 +57,7 @@ export const resources = {
       },
       custom: {
         repeat: 'Пароли не совпадают',
+        passwordRules: `Пароль должен содержать не менее 1 буквы, 1 цифры, 1 специального символа`,
       },
     },
   },
