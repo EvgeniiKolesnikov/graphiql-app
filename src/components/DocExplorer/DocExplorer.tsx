@@ -13,14 +13,17 @@ export const DocExplorer = () => {
         position="right"
         opened={opened}
         onClose={close}
-        styles={{ close: { width: '3rem' }, title: { fontSize: '2rem', fontWeight: 'bold' } }}
+        styles={{
+          close: { width: '3rem' },
+          title: { fontSize: '2rem', fontWeight: 'bold' },
+        }}
         closeButtonProps={{ iconSize: '3rem' }}
-        title={t('docs')}
+        title={t('DOCS')}
         withOverlay={false}
       >
         {
           <iframe
-            src="./docs/index.html"
+            src="/docs/index.html"
             loading="lazy"
             style={{ height: '90vh', width: '100%' }}
             title="Documentation for graphQL API"
@@ -30,7 +33,7 @@ export const DocExplorer = () => {
 
       <Group position="left">
         <Button color="dark" size="lg" uppercase onClick={open}>
-          Open Docs
+          {t('Open Docs')}
         </Button>
       </Group>
     </>

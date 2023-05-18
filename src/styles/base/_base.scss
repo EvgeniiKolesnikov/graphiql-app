@@ -23,7 +23,7 @@ main {
 }
 
 .container.fixed {
-  margin: 5rem auto 3rem;
+  margin: 7rem auto 3rem;
   @include maxQ-sm-tablet {
     margin: 13rem auto 3rem;
   }
