@@ -3,7 +3,7 @@ import { useForm, zodResolver } from '@mantine/form';
 import { schema } from './schema';
 import { useRegister } from '../../../hooks/auth/useRegister';
 import s from './RegisterForm.module.scss';
-import { Fragment, useEffect } from 'react';
+import { useEffect } from 'react';
 import { notifications } from '@mantine/notifications';
 import { useTranslation } from 'react-i18next';
 
@@ -38,7 +38,7 @@ export const RegisterForm = () => {
   }, [error]);
 
   return (
-    <Fragment>
+    <>
       <form onSubmit={form.onSubmit(onSubmit)} className={s.form}>
         <fieldset className={s.inputs}>
           <TextInput size="xl" label={t('Login')} {...form.getInputProps('login')} />
@@ -60,6 +60,6 @@ export const RegisterForm = () => {
         visible={isLoading}
         loaderProps={{ size: 'lg', color: 'grape', variant: 'bars' }}
       />
-    </Fragment>
+    </>
   );
 };

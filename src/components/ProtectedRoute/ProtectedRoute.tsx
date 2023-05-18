@@ -1,4 +1,4 @@
-import { PropsWithChildren, Fragment } from 'react';
+import { PropsWithChildren } from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/auth/useAuth';
 
@@ -14,5 +14,5 @@ export const ProtectedRoute = ({ protectSigned, defaultRoute, children }: Props)
     return <Navigate to={defaultRoute} replace />;
   }
 
-  return <Fragment>{children}</Fragment>;
+  return <>{children}</>;
 };

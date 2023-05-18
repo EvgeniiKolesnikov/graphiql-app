@@ -3,7 +3,7 @@ import { TextInput, PasswordInput, Button, LoadingOverlay } from '@mantine/core'
 import { useForm, zodResolver } from '@mantine/form';
 import { useLogin } from '../../../hooks/auth/useLogin';
 import { schema } from './schema';
-import { Fragment, useEffect } from 'react';
+import { useEffect } from 'react';
 import { notifications } from '@mantine/notifications';
 import { useTranslation } from 'react-i18next';
 
@@ -35,7 +35,7 @@ export const LoginForm = () => {
   }, [error]);
 
   return (
-    <Fragment>
+    <>
       <form onSubmit={form.onSubmit(onSubmit)} className={s.form}>
         <fieldset className={s.inputs}>
           <TextInput size="xl" label={t('Email')} {...form.getInputProps('email')} />
@@ -51,6 +51,6 @@ export const LoginForm = () => {
         visible={isLoading}
         loaderProps={{ size: 'lg', color: 'grape', variant: 'bars' }}
       />
-    </Fragment>
+    </>
   );
 };
