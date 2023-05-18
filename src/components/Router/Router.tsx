@@ -1,7 +1,7 @@
 import { MainPage, NotFoundPage, SignPage, WelcomePage } from 'pages';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { MainLayout, Spinner } from '..';
-import ProtectedRoute from 'components/ProtectedRoute/ProtectedRoute';
+import { ProtectedRoute } from 'components';
 import { useAuth } from '../../hooks/auth/useAuth';
 
 const Router = () => {

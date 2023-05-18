@@ -16,3 +16,4 @@ export * from './Button/Button';
 export * from './Cards/Cards';
 export * from './Spinner/Spinner';
 export * from './SignContainer/SignContainer';
+export * from './ProtectedRoute/ProtectedRoute';

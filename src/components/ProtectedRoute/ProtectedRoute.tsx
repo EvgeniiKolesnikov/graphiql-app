@@ -7,7 +7,7 @@ interface Props extends PropsWithChildren {
   defaultRoute: string;
 }
 
-const ProtectedRoute = ({ protectSigned, defaultRoute, children }: Props) => {
+export const ProtectedRoute = ({ protectSigned, defaultRoute, children }: Props) => {
   const { user } = useAuth();
 
   if ((protectSigned && !user) || (!protectSigned && user)) {
@@ -16,5 +16,3 @@ const ProtectedRoute = ({ protectSigned, defaultRoute, children }: Props) => {
 
   return <Fragment>{children}</Fragment>;
 };
-
-export default ProtectedRoute;
