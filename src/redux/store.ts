@@ -1,10 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
-import SignSlice from './slices/SignSlice';
 
 const store = configureStore({
-  reducer: {
-    sign: SignSlice,
-  },
+  reducer: {},
 });
 
 export type RootStore = ReturnType<typeof store.getState>;
