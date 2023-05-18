@@ -17,3 +17,4 @@ export * from './Cards/Cards';
 export * from './LangSwitcher/LangSwitcher';
 export * from './Spinner/Spinner';
 export * from './DocExplorer/DocExplorer';
+export * from './SignContainer/SignContainer';

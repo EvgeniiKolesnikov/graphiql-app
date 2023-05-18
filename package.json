@@ -16,7 +16,9 @@
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
     "@mantine/core": "^6.0.10",
+    "@mantine/form": "^6.0.10",
     "@mantine/hooks": "^6.0.10",
+    "@mantine/notifications": "^6.0.10",
     "@mui/material": "^5.12.3",
     "@reduxjs/toolkit": "^1.9.5",
     "@tabler/icons-react": "^2.17.0",
@@ -25,8 +27,6 @@
     "classnames": "^2.3.2",
     "firebase": "^9.21.0",
     "graphql": "^16.6.0",
-    "graphql-docs": "^0.2.0",
-    "graphql-tools": "^8.3.20",
     "i18next": "^22.4.15",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.2.0",
@@ -41,7 +41,8 @@
     "redux-persist": "^6.0.0",
     "spectaql": "^2.0.8",
     "vite-plugin-stylelint": "^4.3.0",
-    "vite-plugin-svgr": "^3.2.0"
+    "vite-plugin-svgr": "^3.2.0",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@types/node": "^18.16.3",
