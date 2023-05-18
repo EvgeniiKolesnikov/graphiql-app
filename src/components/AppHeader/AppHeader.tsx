@@ -58,7 +58,9 @@ export const AppHeader = () => {
                 <li className={s.list__item} key={id}>
                   <NavLink
                     end
-                    className={({ isActive }) => handleLink(isActive, s, sticky)}
+                    className={({ isActive }) =>
+                      handleLink(isActive, s, sticky, title === 'Main' && !user)
+                    }
                     to={link}
                   >
                     {t(title)}
