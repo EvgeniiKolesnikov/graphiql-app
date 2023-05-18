@@ -1,0 +1,15 @@
+.container {
+  position: relative;
+  padding: 20px;
+
+  border: 1px solid silver;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  font-size: 12px;
+}
