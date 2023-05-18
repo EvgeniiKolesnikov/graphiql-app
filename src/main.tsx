@@ -11,7 +11,7 @@ import './styles/index.scss';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
-      <MantineProvider>
+      <MantineProvider withGlobalStyles theme={{ fontFamily: 'Roboto, sans-serif' }}>
         <Notifications />
         <App />
       </MantineProvider>
