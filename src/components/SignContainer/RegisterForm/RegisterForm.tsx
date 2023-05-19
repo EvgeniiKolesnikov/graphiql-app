@@ -1,12 +1,9 @@
 import { TextInput, PasswordInput, Button, LoadingOverlay } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { schema } from './schema';
-import { auth } from '../../../firebase/firebase';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { Navigate } from 'react-router-dom';
 import { useRegister } from '../../../hooks/auth/useRegister';
 import s from './RegisterForm.module.scss';
-import { Fragment, useEffect } from 'react';
+import { useEffect } from 'react';
 import { notifications } from '@mantine/notifications';
 import { useTranslation } from 'react-i18next';
 
@@ -18,7 +15,6 @@ interface IFormValues {
 }
 
 export const RegisterForm = () => {
-  const [user] = useAuthState(auth);
   const { register, isLoading, error } = useRegister();
   const { t } = useTranslation();
 
@@ -41,12 +37,8 @@ export const RegisterForm = () => {
     }
   }, [error]);
 
-  if (user) {
-    return <Navigate to="/main" />;
-  }
-
   return (
-    <Fragment>
+    <>
       <form onSubmit={form.onSubmit(onSubmit)} className={s.form}>
         <fieldset className={s.inputs}>
           <TextInput size="xl" label={t('Login')} {...form.getInputProps('login')} />
@@ -68,6 +60,6 @@ export const RegisterForm = () => {
         visible={isLoading}
         loaderProps={{ size: 'lg', color: 'grape', variant: 'bars' }}
       />
-    </Fragment>
+    </>
   );
 };

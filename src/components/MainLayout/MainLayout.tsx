@@ -1,15 +1,15 @@
-import { MantineProvider } from '@mantine/core';
 import { Outlet } from 'react-router-dom';
+import { Fragment } from 'react';
 import { AppFooter, AppHeader } from '..';
 
 export const MainLayout = () => {
   return (
-    <MantineProvider withGlobalStyles theme={{ fontFamily: 'Roboto, sans-serif' }}>
+    <Fragment>
       <AppHeader />
       <main className="container fixed">
         <Outlet />
       </main>
       <AppFooter />
-    </MantineProvider>
+    </Fragment>
   );
 };

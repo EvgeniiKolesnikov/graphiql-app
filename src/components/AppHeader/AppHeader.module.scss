@@ -77,6 +77,11 @@
   color: $main-color;
 }
 
+.menu__link_disabled {
+  pointer-events: none;
+  color: gray;
+}
+
 .sticky {
   padding: 1rem 0;
   backdrop-filter: blur(10px);
