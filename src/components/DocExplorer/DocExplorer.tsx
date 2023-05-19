@@ -1,6 +1,8 @@
 import { useDisclosure } from '@mantine/hooks';
 import { Drawer, Group, Button } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
+import { IFrame } from 'components/Iframe/Iframe';
+import { Spinner } from '..';
 
 export const DocExplorer = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -21,14 +23,7 @@ export const DocExplorer = () => {
         title={t('DOCS')}
         withOverlay={false}
       >
-        {
-          <iframe
-            src="/docs/index.html"
-            loading="lazy"
-            style={{ height: '90vh', width: '100%' }}
-            title="Documentation for graphQL API"
-          />
-        }
+        <IFrame fallback={<Spinner />} />
       </Drawer>
 
       <Group position="left">
