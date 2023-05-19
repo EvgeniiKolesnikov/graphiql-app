@@ -1,13 +1,12 @@
-import { Btn } from 'components/Button/Button';
-import { LangSwitcher } from 'components/LangSwitcher/LangSwitcher';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { useAuth } from '../../hooks/auth/useAuth';
+import { logout } from '../../firebase/firebase';
 import handleLink from '../../utils/hadleLink';
-import { auth } from '../../firebase/firebase';
-import { signOut } from 'firebase/auth';
 import s from './AppHeader.module.scss';
+import { Btn } from 'components/Button/Button';
+import { LangSwitcher } from 'components/LangSwitcher/LangSwitcher';
 
 const links = [
   { id: 1, title: 'Home', link: '/' },
@@ -16,7 +15,7 @@ const links = [
 
 export const AppHeader = () => {
   const [sticky, setSticky] = useState(false);
-  const [user] = useAuthState(auth);
+  const { user } = useAuth();
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -42,7 +41,7 @@ export const AppHeader = () => {
   } else {
     authButtons = (
       <div className={s.btn__wrapper}>
-        <NavLink to={'/'} onClick={() => signOut(auth)}>
+        <NavLink to={'/'} onClick={() => logout()}>
           <Btn text={t('Sign out')} />
         </NavLink>
       </div>
@@ -59,7 +58,9 @@ export const AppHeader = () => {
                 <li className={s.list__item} key={id}>
                   <NavLink
                     end
-                    className={({ isActive }) => handleLink(isActive, s, sticky)}
+                    className={({ isActive }) =>
+                      handleLink(isActive, s, sticky, title === 'Main' && !user)
+                    }
                     to={link}
                   >
                     {t(title)}
