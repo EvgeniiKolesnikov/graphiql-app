@@ -39,7 +39,12 @@ export const LoginForm = () => {
       <form onSubmit={form.onSubmit(onSubmit)} className={s.form}>
         <fieldset className={s.inputs}>
           <TextInput size="xl" label={t('Email')} {...form.getInputProps('email')} />
-          <PasswordInput size="xl" label={t('Password')} {...form.getInputProps('password')} />
+          <PasswordInput
+            size="xl"
+            label={t('Password')}
+            {...form.getInputProps('password')}
+            autoComplete=""
+          />
         </fieldset>
 
         <Button color="grape" size="lg" type="submit" fullWidth uppercase>
