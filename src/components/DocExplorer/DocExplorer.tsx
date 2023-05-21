@@ -1,8 +1,7 @@
 import { useDisclosure } from '@mantine/hooks';
 import { Drawer, Group, Button } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
-import { IFrame } from 'components/Iframe/Iframe';
-import { Spinner } from '..';
+import { IFrame, Spinner } from 'components';
 
 export const DocExplorer = () => {
   const [opened, { open, close }] = useDisclosure(false);

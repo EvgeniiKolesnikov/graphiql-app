@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../hooks/auth/useAuth';
 import { logout } from '../../firebase/firebase';
 import handleLink from '../../utils/hadleLink';
+import { Btn, LangSwitcher } from 'components';
+
 import s from './AppHeader.module.scss';
-import { Btn } from 'components/Button/Button';
-import { LangSwitcher } from 'components/LangSwitcher/LangSwitcher';
 
 const links = [
   { id: 1, title: 'Home', link: '/' },
