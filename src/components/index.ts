@@ -18,5 +18,10 @@ export * from './Spinner/Spinner';
 export * from './SignContainer/SignContainer';
 export * from './ProtectedRoute/ProtectedRoute';
 export * from './LangSwitcher/LangSwitcher';
-export * from './Iframe/Iframe';
-export * from './DocExplorer/DocExplorer';
+
+export * from './Docs/DocsButton/DocsButton';
+export * from './Docs/DocsContainer/DocsContainer';
+export * from './Docs/DocsCrossButton/DocsCrossButton';
+export * from './Docs/DocsExplorer/DocsExplorer';
+export * from './Docs/DocsContainer/DocsContainer';
+export * from './Docs/Iframe/Iframe';
