@@ -44,7 +44,7 @@ export const AppHeader = () => {
         <span className={s.email} title={user.email || ''}>
           {user.email}
         </span>
-        <NavLink to={'/'} onClick={() => logout()}>
+        <NavLink className={s.link} to={'/'} onClick={() => logout()}>
           <Btn text={t('Sign out')} />
         </NavLink>
       </div>

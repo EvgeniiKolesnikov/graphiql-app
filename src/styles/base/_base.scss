@@ -39,6 +39,7 @@ main {
   }
 }
 .title {
+  margin: 0 auto 10px;
   @include font(2.5rem, 130%, 700);
   text-align: center;
 }

@@ -8,7 +8,7 @@
   padding: 1rem 0;
   z-index: 100;
   background: $light-color;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 .container {
@@ -36,21 +36,21 @@
 }
 
 .btn__wrapper {
-  width: 8rem;
-  margin-left: 2rem;
+  width: 250px;
 
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 1rem;
   @include maxQ-sm-tablet {
     margin-left: 0;
+    flex-direction: column;
   }
 }
 
 .menu {
-  margin-right: auto;
   user-select: none;
-
+  margin-right: auto;
   @include maxQ-sm-tablet {
     margin-right: 0;
   }
@@ -97,4 +97,21 @@
   padding: 1rem 0;
   backdrop-filter: blur(10px);
   background: $grey-color;
+}
+
+.email {
+  font-size: 14px;
+  width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-left: 1rem;
+  text-align: right;
+  @include maxQ-sm-tablet {
+    width: 300px;
+    text-align: center;
+  }
+}
+
+.link {
+  width: 90px;
 }

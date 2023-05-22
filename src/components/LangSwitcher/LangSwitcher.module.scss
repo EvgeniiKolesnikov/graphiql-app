@@ -2,10 +2,10 @@
 
 .switcher {
   @extend %transition;
-  margin-right: 2rem;
+  margin-left: 2.8rem;
   width: 15rem;
   border: solid 0.5px #f3a2f9;
   @include maxQ-sm-tablet {
-    margin-right: 0;
+    margin-left: 0;
   }
 }
