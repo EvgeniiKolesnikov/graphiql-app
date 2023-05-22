@@ -41,6 +41,9 @@ export const AppHeader = () => {
   } else {
     authButtons = (
       <div className={s.btn__wrapper}>
+        <span className={s.email} title={user.email || ''}>
+          {user.email}
+        </span>
         <NavLink to={'/'} onClick={() => logout()}>
           <Btn text={t('Sign out')} />
         </NavLink>
@@ -71,7 +74,6 @@ export const AppHeader = () => {
           </ul>
         </nav>
         <LangSwitcher />
-        {user && <span>{user.email}</span>}
         {authButtons}
       </div>
     </header>
