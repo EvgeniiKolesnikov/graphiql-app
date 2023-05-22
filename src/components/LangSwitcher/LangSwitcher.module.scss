@@ -5,4 +5,7 @@
   margin-right: 2rem;
   width: 15rem;
   border: solid 0.5px #f3a2f9;
+  @include maxQ-sm-tablet {
+    margin-right: 0;
+  }
 }
