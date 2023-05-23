@@ -43,10 +43,16 @@ export const RegisterForm = () => {
         <fieldset className={s.inputs}>
           <TextInput size="xl" label={t('Login')} {...form.getInputProps('login')} />
           <TextInput size="xl" label={t('Email')} {...form.getInputProps('email')} />
-          <PasswordInput size="xl" label={t('Password')} {...form.getInputProps('password')} />
+          <PasswordInput
+            size="xl"
+            label={t('Password')}
+            autoComplete=""
+            {...form.getInputProps('password')}
+          />
           <PasswordInput
             size="xl"
             label={t('Repeat password')}
+            autoComplete=""
             {...form.getInputProps('repeatPassword')}
           />
         </fieldset>

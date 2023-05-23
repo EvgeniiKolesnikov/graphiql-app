@@ -1,6 +1,5 @@
-// import { useEffect, useState } from 'react';
-import { DocExplorer } from 'components/DocExplorer/DocExplorer';
+import { DocsExplorer } from 'components';
 
 export const MainPage = () => {
-  return <DocExplorer />;
+  return <DocsExplorer />;
 };
