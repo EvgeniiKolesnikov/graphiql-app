@@ -1,6 +1,4 @@
 {
-  "English": "English",
-  "Russian": "Russian",
   "Sign in": "Sign in",
   "Sign up": "Sign up",
   "Sign out": "Sign out",
@@ -21,5 +19,7 @@
   "All rights reserved": "All rights reserved",
   "Our team": "Our team",
   "Not Found": "Not Found",
-  "Docs": "Docs"
+  "Docs": "Docs",
+  "EN": "EN",
+  "RU": "RU"
 }
