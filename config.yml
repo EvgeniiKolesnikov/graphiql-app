@@ -1,0 +1,22 @@
+spectaql:
+  embeddable: true
+  displayAllServers: false
+  targetDir: ./public/docs
+
+
+introspection:
+  removeTrailingPeriodFromDescriptions: false
+  url: https://rickandmortyapi.com/graphql
+  dynamicExamplesProcessingModule: none
+  queryNameStrategy: none
+  fieldExpansionDepth: 2
+
+  spectaqlDirective:
+    enable: true
+
+extensions:
+  graphqlScalarExamples: true
+
+info:
+  title: GraphQL API Reference
+  description: Welcome to the party!

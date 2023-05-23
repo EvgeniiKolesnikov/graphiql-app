@@ -1,12 +1,12 @@
-import { LangSwitcher } from 'components/LangSwittcher/LangSwitcher';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../hooks/auth/useAuth';
 import { logout } from '../../firebase/firebase';
 import handleLink from '../../utils/hadleLink';
+import { Btn, LangSwitcher } from 'components';
+
 import s from './AppHeader.module.scss';
-import { Btn } from '..';
 
 const links = [
   { id: 1, title: 'Home', link: '/' },
@@ -41,7 +41,10 @@ export const AppHeader = () => {
   } else {
     authButtons = (
       <div className={s.btn__wrapper}>
-        <NavLink to={'/'} onClick={() => logout()}>
+        <span className={s.email} title={user.email || ''}>
+          {user.email}
+        </span>
+        <NavLink className={s.link} to={'/'} onClick={() => logout()}>
           <Btn text={t('Sign out')} />
         </NavLink>
       </div>
@@ -71,7 +74,6 @@ export const AppHeader = () => {
           </ul>
         </nav>
         <LangSwitcher />
-        {user && <span>{user.email}</span>}
         {authButtons}
       </div>
     </header>
