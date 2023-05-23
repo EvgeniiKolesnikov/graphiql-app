@@ -1,19 +1,19 @@
 .button {
   position: relative;
   float: right;
-  right: 10px;
+  right: 0;
   z-index: 1;
 
-  height: 25px;
+  height: 30px;
   padding: 5px;
 
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 10px;
+  gap: 7px;
 
   background: #e8e8e8;
-  border-radius: 5px;
+  border-radius: 3px;
 
   font-size: 20px;
 

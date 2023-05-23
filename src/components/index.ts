@@ -1,6 +1,7 @@
 export * from './App/App';
 export * from './AppFooter/AppFooter';
 export * from './AppHeader/AppHeader';
+export * from './Arrow/Arrow';
 export * from './Button/Button';
 export * from './Cards/Cards';
 
