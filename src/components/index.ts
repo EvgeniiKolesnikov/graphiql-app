@@ -17,3 +17,6 @@ export * from './Cards/Cards';
 export * from './Spinner/Spinner';
 export * from './SignContainer/SignContainer';
 export * from './ProtectedRoute/ProtectedRoute';
+export * from './LangSwitcher/LangSwitcher';
+export * from './Iframe/Iframe';
+export * from './DocExplorer/DocExplorer';
