@@ -54,7 +54,6 @@ export const RegisterForm = () => {
             label={t('Repeat password')}
             autoComplete=""
             {...form.getInputProps('repeatPassword')}
-            autoComplete=""
           />
         </fieldset>
 
