@@ -41,9 +41,9 @@ export const LoginForm = () => {
           <TextInput size="xl" label={t('Email')} {...form.getInputProps('email')} />
           <PasswordInput
             size="xl"
+            autoComplete=""
             label={t('Password')}
             {...form.getInputProps('password')}
-            autoComplete=""
           />
         </fieldset>
 

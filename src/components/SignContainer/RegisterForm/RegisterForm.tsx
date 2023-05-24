@@ -46,12 +46,13 @@ export const RegisterForm = () => {
           <PasswordInput
             size="xl"
             label={t('Password')}
-            {...form.getInputProps('password')}
             autoComplete=""
+            {...form.getInputProps('password')}
           />
           <PasswordInput
             size="xl"
             label={t('Repeat password')}
+            autoComplete=""
             {...form.getInputProps('repeatPassword')}
             autoComplete=""
           />

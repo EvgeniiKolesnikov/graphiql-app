@@ -8,6 +8,7 @@
 .inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   @include maxQ-tablet {
     flex-direction: column-reverse;
     align-items: center;
@@ -17,7 +18,7 @@
 .text {
   @include font(1.4rem, 120%);
   @include maxQ-tablet {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }
 
@@ -32,7 +33,7 @@
   @media (max-width: 600px) {
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0rem;
   }
 }
 

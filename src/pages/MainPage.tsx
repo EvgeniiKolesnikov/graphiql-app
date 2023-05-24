@@ -1,3 +1,5 @@
+import { DocsExplorer } from 'components';
+
 export const MainPage = () => {
-  return <h1>EDITORE</h1>;
+  return <DocsExplorer />;
 };
