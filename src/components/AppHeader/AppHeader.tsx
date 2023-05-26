@@ -57,19 +57,21 @@ export const AppHeader = () => {
         <nav className={s.menu}>
           <ul className={s.menu__list}>
             {links.map(({ id, title, link }) => {
-              return (
-                <li className={s.list__item} key={id}>
-                  <NavLink
-                    end
-                    className={({ isActive }) =>
-                      handleLink(isActive, s, sticky, title === 'Main' && !user)
-                    }
-                    to={link}
-                  >
-                    {t(title)}
-                  </NavLink>
-                </li>
-              );
+              if (title === 'Main' && !user) {
+                return null;
+              } else {
+                return (
+                  <li className={s.list__item} key={id}>
+                    <NavLink
+                      end
+                      className={({ isActive }) => handleLink(isActive, s, sticky)}
+                      to={link}
+                    >
+                      {t(title)}
+                    </NavLink>
+                  </li>
+                );
+              }
             })}
           </ul>
         </nav>
