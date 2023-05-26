@@ -13,7 +13,7 @@ export const Cards = () => {
       breakpoints={[{ maxWidth: 'sm', cols: 1 }]}
       style={{ justifyContent: 'center', padding: '0 1rem 0' }}
     >
-      <Card shadow="sm" padding="md" radius="md" withBorder style={{ border: '1px solid #000000' }}>
+      <Card shadow="sm" padding="md" radius="md" withBorder>
         <Card.Section style={{ display: 'flex', justifyContent: 'center' }}>
           <Image
             src="/src/assets/Evgeniy.jpeg"
@@ -34,7 +34,7 @@ export const Cards = () => {
           </Text>
         </Group>
         <Text size="1.6rem" className={s.text}>
-          Team Lead of our team! Responsible for the implementation of the editor and other.
+          {t('Team Lead of our team! Responsible for the implementation of the editor and other.')}
         </Text>
       </Card>
       <Card shadow="sm" padding="md" radius="md" withBorder>
@@ -54,7 +54,7 @@ export const Cards = () => {
           </Text>
         </Group>
         <Text size="1.6rem" className={s.text}>
-          Developer. Responsible for user authorization, notifications and other.
+          {t('Developer. Responsible for user authorization, notifications and other.')}
         </Text>
       </Card>
       <Card shadow="sm" padding="md" radius="md" withBorder>
@@ -74,7 +74,7 @@ export const Cards = () => {
           </Text>
         </Group>
         <Text size="1.6rem" className={s.text}>
-          Developer. Responsible for UI, adaptive, docs section and other.
+          {t('Developer. Responsible for UI, adaptive, docs menu and other.')}
         </Text>
       </Card>
     </SimpleGrid>
