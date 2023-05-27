@@ -34,7 +34,7 @@ export const Cards = () => {
           </Text>
         </Group>
         <Text size="1.6rem" className={s.text}>
-          {t('Team Lead of our team! Responsible for the implementation of the editor and other.')}
+          {t('Team Lead of our team!')}
         </Text>
       </Card>
       <Card shadow="sm" padding="md" radius="md" withBorder>
@@ -54,7 +54,7 @@ export const Cards = () => {
           </Text>
         </Group>
         <Text size="1.6rem" className={s.text}>
-          {t('Developer. Responsible for user authorization, notifications and other.')}
+          {t('Developer. Alexey')}
         </Text>
       </Card>
       <Card shadow="sm" padding="md" radius="md" withBorder>
@@ -74,7 +74,7 @@ export const Cards = () => {
           </Text>
         </Group>
         <Text size="1.6rem" className={s.text}>
-          {t('Developer. Responsible for UI, adaptive, docs menu and other.')}
+          {t('Developer. Yana')}
         </Text>
       </Card>
     </SimpleGrid>

@@ -6,11 +6,7 @@ export const WelcomePage = () => {
   return (
     <>
       <h2 className="title">{t('About project and course')}</h2>
-      <div className="description">
-        {t(
-          `The main goal of our project is to implement GraphQL playground. This goal has been achieved during the final task of RS School React cource.`
-        )}
-      </div>
+      <div className="description">{t('Main goal.')}</div>
       <h1 className="title">{t('Our team')}</h1>
       <Cards />
     </>
