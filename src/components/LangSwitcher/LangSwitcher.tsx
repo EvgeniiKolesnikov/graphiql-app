@@ -20,11 +20,12 @@ export const LangSwitcher = () => {
       onChange={(value) => translate(value)}
       size="md"
       color="gray"
+      styles={{ label: { fontSize: '1.4rem' } }}
       transitionDuration={500}
       transitionTimingFunction="linear"
       data={[
-        { label: `${t('English')}`, value: 'en' },
-        { label: `${t('Russian')}`, value: 'ru' },
+        { label: `${t('EN')}`, value: 'en' },
+        { label: `${t('RU')}`, value: 'ru' },
       ]}
     />
   );

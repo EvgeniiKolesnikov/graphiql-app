@@ -8,7 +8,14 @@ type BtnProps = {
 
 export const Btn: FC<BtnProps> = ({ text }) => {
   return (
-    <Button color="grape" size="lg" fullWidth uppercase className={s.btn}>
+    <Button
+      color="grape"
+      size="lg"
+      styles={{ inner: { fontSize: '1.4rem' } }}
+      fullWidth
+      uppercase
+      className={s.btn}
+    >
       {text}
     </Button>
   );

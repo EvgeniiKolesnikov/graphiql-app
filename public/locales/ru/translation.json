@@ -1,8 +1,6 @@
 {
-  "English": "Английский",
-  "Russian": "Русский",
   "Sign in": "Войти",
-  "Sign up": "Зарегистрироваться",
+  "Sign up": "Регистрация",
   "Sign out": "Выйти",
   "Already have an account?": "Уже зарегистрированы?",
   "Don't have an account yet?": "Еще не зарегистрированы?",
@@ -21,6 +19,13 @@
   "All rights reserved": "Все права защищены",
   "Our team": "Наша команда",
   "Not Found": "Не найдено",
+  "EN": "EN",
+  "RU": "RU",
+  "Team Lead of our team! Responsible for the implementation of the editor and other.": "Тим лид нашей команды! Ответственный за реализацию редактора и другое.",
+  "Developer. Responsible for user authorization, notifications and other.": "Разработчик. Ответственный за авторизацию пользователя, уведомления и другое.",
+  "Developer. Responsible for UI, adaptive, docs menu and other.": "Разработчик. Ответственный за UI, адаптивность, документацию и другое.",
+  "About project and course": "О проекте и курсе",
+  "The main goal of our project is to implement GraphQL playground. This goal has been achieved during the final task of RS School React cource.": "Главная цель проекта - реализовать GraphQL редактор. Эта цель была достигнута в рамках финального задания по курсу React в RS School.",
   "Error": "Упс! Что-то пошло не так! Пожалуйста перезагрузите страницу.",
   "Docs": "Документация"
 }

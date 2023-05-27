@@ -23,7 +23,7 @@ main {
 }
 
 .container.fixed {
-  margin: 7rem auto 3rem;
+  margin: 7rem auto 2rem;
   @include maxQ-sm-tablet {
     margin: 17rem auto 3rem;
   }
@@ -39,8 +39,14 @@ main {
   }
 }
 .title {
-  margin: 0 auto 10px;
-  @include font(2.5rem, 130%, 700);
+  margin:  0 auto 1.5rem;
+  @include font(2.4rem, 130%, 700);
+  text-align: center;
+}
+
+.description {
+  @include font(1.6rem, 120%);
+  padding: 0 0 1rem 0;
   text-align: center;
 }
 

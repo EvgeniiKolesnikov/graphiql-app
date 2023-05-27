@@ -1,71 +1,82 @@
-import { Grid, Card, Image, Text, Group } from '@mantine/core';
+import { Card, Image, Text, Group, SimpleGrid } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
+import { useMediaQuery } from '@mantine/hooks';
 import s from './Card.module.scss';
 
 export const Cards = () => {
   const { t } = useTranslation();
+  const breakpoint = useMediaQuery('(max-width: 660px)');
   return (
-    <Grid justify="space-around">
-      <Grid.Col style={{ maxWidth: 350 }} sm={4} xs={4}>
-        <Card shadow="sm" padding="lg" radius="md" withBorder>
-          <Card.Section>
-            <Image
-              src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
-              height={160}
-              alt="Norway"
-            />
-          </Card.Section>
-          <Group position="apart" mt="md" mb="xs">
-            <Text size="2rem" weight={700}>
-              {t('Evgenii Kolesnikov')}
-            </Text>
-          </Group>
-          <Text size="1.6rem" className={s.text}>
-            With Fjord Tours you can explore more of the magical fjord landscapes with tours and
-            activities on and around the fjords of Norway
+    <SimpleGrid
+      spacing={'lg'}
+      cols={3}
+      breakpoints={[{ maxWidth: 'sm', cols: 1 }]}
+      style={{ justifyContent: 'center', padding: '0 1rem 0' }}
+    >
+      <Card shadow="sm" padding="md" radius="md" withBorder>
+        <Card.Section style={{ display: 'flex', justifyContent: 'center' }}>
+          <Image
+            src="/src/assets/Evgeniy.jpeg"
+            radius="50%"
+            width={breakpoint ? '65%' : '75%'}
+            styles={{
+              imageWrapper: {
+                display: 'flex',
+                justifyContent: 'center',
+              },
+            }}
+            alt="Team Lead"
+          />
+        </Card.Section>
+        <Group position="center" mt="md" mb="xs">
+          <Text size="1.6rem" weight={700} className={s.title}>
+            {t('Evgenii Kolesnikov')}
           </Text>
-        </Card>
-      </Grid.Col>
-      <Grid.Col style={{ maxWidth: 350 }} sm={4} xs={4}>
-        <Card shadow="sm" padding="lg" radius="md" withBorder>
-          <Card.Section>
-            <Image
-              src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
-              height={160}
-              alt="Norway"
-            />
-          </Card.Section>
-          <Group position="apart" mt="md" mb="xs">
-            <Text size="2rem" weight={700}>
-              {t('Aliaksey Kashirsky')}
-            </Text>
-          </Group>
-          <Text size="1.6rem" className={s.text}>
-            With Fjord Tours you can explore more of the magical fjord landscapes with tours and
-            activities on and around the fjords of Norway
+        </Group>
+        <Text size="1.6rem" className={s.text}>
+          {t('Team Lead of our team! Responsible for the implementation of the editor and other.')}
+        </Text>
+      </Card>
+      <Card shadow="sm" padding="md" radius="md" withBorder>
+        <Card.Section style={{ display: 'flex', justifyContent: 'center' }}>
+          <Image
+            className={s.image}
+            src="/src/assets/Alexey.jpeg"
+            radius="50%"
+            width={breakpoint ? '65%' : '75%'}
+            styles={{ imageWrapper: { display: 'flex', justifyContent: 'center' } }}
+            alt="Developer"
+          />
+        </Card.Section>
+        <Group position="center" mt="md" mb="xs">
+          <Text size="1.6rem" weight={700} className={s.title}>
+            {t('Aliaksey Kashirsky')}
           </Text>
-        </Card>
-      </Grid.Col>
-      <Grid.Col style={{ maxWidth: 350 }} sm={4} xs={4}>
-        <Card shadow="sm" padding="lg" radius="md" withBorder>
-          <Card.Section>
-            <Image
-              src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
-              height={160}
-              alt="Norway"
-            />
-          </Card.Section>
-          <Group position="apart" mt="md" mb="xs">
-            <Text size="2rem" weight={700}>
-              {t('Yana Pranko')}
-            </Text>
-          </Group>
-          <Text size="1.6rem" className={s.text}>
-            With Fjord Tours you can explore more of the magical fjord landscapes with tours and
-            activities on and around the fjords of Norway
+        </Group>
+        <Text size="1.6rem" className={s.text}>
+          {t('Developer. Responsible for user authorization, notifications and other.')}
+        </Text>
+      </Card>
+      <Card shadow="sm" padding="md" radius="md" withBorder>
+        <Card.Section style={{ display: 'flex', justifyContent: 'center' }}>
+          <Image
+            className={s.image}
+            src="/src/assets/Yana.jpeg"
+            width={breakpoint ? '65%' : '75%'}
+            styles={{ imageWrapper: { display: 'flex', justifyContent: 'center' } }}
+            radius="50%"
+            alt="Developer"
+          />
+        </Card.Section>
+        <Group position="center" mt="md" mb="xs">
+          <Text size="1.6rem" weight={700} className={s.title}>
+            {t('Yana Pranko')}
           </Text>
-        </Card>
-      </Grid.Col>
-    </Grid>
+        </Group>
+        <Text size="1.6rem" className={s.text}>
+          {t('Developer. Responsible for UI, adaptive, docs menu and other.')}
+        </Text>
+      </Card>
+    </SimpleGrid>
   );
 };
