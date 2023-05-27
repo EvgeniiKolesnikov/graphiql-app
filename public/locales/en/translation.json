@@ -21,11 +21,11 @@
   "Not Found": "Not Found",
   "EN": "EN",
   "RU": "RU",
-  "Team Lead of our team! Responsible for the implementation of the editor and other.": "Team Lead of our team! Responsible for the implementation of the editor and other.",
-  "Developer. Responsible for user authorization, notifications and other.": "Developer. Responsible for user authorization, notifications and other.",
-  "Developer. Responsible for UI, adaptive, docs section and other.": "Developer. Responsible for UI, adaptive, docs section and other.",
+  "Team Lead of our team!": "Team Lead of our team! Responsible for the implementation of the editor and other.",
+  "Developer. Alexey": "Developer. Responsible for user authorization, notifications and other.",
+  "Developer. Yana": "Developer. Responsible for UI, adaptive, docs section and other.",
   "About project and course": "About project and course",
-  "The main goal of our project is to implement GraphQL playground. This goal has been achieved during the final task of RS School React cource.": "The main goal of our project is to implement GraphQL playground. This goal has been achieved during the final task of RS School React cource.",
+  "Main goal.": "The main goal of our project is to implement GraphQL playground. This goal has been achieved during the final task of RS School React cource.",
   "Error": "Oops! Something went wrong! Please reload the page.",
   "Docs": "Docs"
 }
