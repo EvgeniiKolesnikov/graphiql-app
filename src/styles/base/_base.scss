@@ -18,26 +18,31 @@ body {
   color: $dark-color;
 }
 
+#root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 main {
   flex: 1 1 auto;
 }
 
-.container.fixed {
-  margin: 7rem auto 3rem;
-  @include maxQ-sm-tablet {
-    margin: 17rem auto 3rem;
-  }
-}
 .container {
   width: 100%;
   max-width: $max-width;
-  padding: 0 2rem;
+  padding: 0 1rem;
   margin: 0rem auto;
+}
 
-  @include maxQ-mobile {
-    padding: 0rem 1rem;
+.container.fixed {
+  margin: 7rem auto 1rem;
+  @include maxQ-sm-tablet {
+    margin: 17rem auto 1rem;
   }
 }
+
 .title {
   margin: 0 auto 10px;
   @include font(2.5rem, 130%, 700);
@@ -49,11 +54,4 @@ main {
   margin: 0 auto;
   width: 50vw;
   height: 60vh;
-}
-
-#root {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
 }
