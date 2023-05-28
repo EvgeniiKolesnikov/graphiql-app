@@ -38,7 +38,7 @@
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/no-var-reqiures": "off",
     "react/jsx-uses-react": "off",
-    // "no-console": "warn",
+    "no-console": "warn",
     "react/react-in-jsx-scope": "off"
   },
   "settings": {

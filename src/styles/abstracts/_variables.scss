@@ -4,6 +4,13 @@ $light-color: #ffffff;
 $main-color: #be4bdb;
 $grey-color: #2f2d2d;
 
+$light-grey: #cfcfcf;
+$light-orchid: #dbc3de;
+$dark-orchid: #be4bdb;
+
+$border-default: $light-orchid;
+$border-focus: $dark-orchid;
+
 // Fonts
 $font-weight-normal: 400;
 $font-weight-semibold: 500;
@@ -14,7 +21,7 @@ $max-width: 1280px;
 
 //Breakpoints
 $break-xs: 320px;
-$break-s: 660px;
+$break-s: 600px;
 $break-sm: 768px;
 $break-md: 1024px;
 $break-lg: 1280px;

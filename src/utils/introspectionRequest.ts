@@ -19,7 +19,6 @@ const fetcher = (url: string, graphqlParams: object) => {
           title: { fontSize: '14px' },
         }),
       });
-      console.log(e);
     });
   return wrapPromise(promise);
 };

@@ -14,6 +14,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'en',
+    supportedLngs: ['en', 'ru'],
     partialBundledLanguages: true,
     debug: false,
     ...resources,

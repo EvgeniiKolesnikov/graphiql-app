@@ -1,0 +1,29 @@
+@use '../../styles/abstracts' as *;
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.description {
+  max-width: 540px;
+  margin: 10px auto 0;
+  font-size: 16px;
+}
+
+.text {
+  color: $grey-color;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 26px;
+}
+
+.name {
+  text-align: center;
+  font-size: 17px;
+}
