@@ -60,7 +60,6 @@
 }
 
 // 600
-
 @mixin maxQ-sm-tablet {
   @media (max-width: $break-s) {
     @content;
@@ -74,8 +73,13 @@
 }
 
 // 320
-
 @mixin maxQ-mobile {
+  @media (max-width: $break-xs) {
+    @content;
+  }
+}
+
+@mixin minQ-mobile {
   @media (min-width: $break-xs) {
     @content;
   }
