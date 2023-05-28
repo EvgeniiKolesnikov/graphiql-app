@@ -1,6 +1,6 @@
 import s from './Editor.module.scss';
 import { Accordion } from '@mantine/core';
-import { MutableRefObject, useRef, useState } from 'react';
+import { ChangeEvent, MutableRefObject, useRef, useState } from 'react';
 
 import {
   DocsExplorer,
@@ -16,7 +16,9 @@ const API = 'https://rickandmortyapi.com/graphql';
 export const Editor = () => {
   const [query, setQuery] = useState<string>(' ');
   const [schema, setSchema] = useState<null | string>(null);
+  const [vars, setVars] = useState<string>('{}');
   const spanRef = useRef<HTMLSpanElement>(null);
+  const varsRef = useRef<HTMLTextAreaElement>(null);
 
   const fetcher = async (url: string, params: object) => {
     const data = await fetch(url, {
@@ -24,7 +26,7 @@ export const Editor = () => {
       headers: {
         'Content-type': 'application/json',
       },
-      body: JSON.stringify(params, null, 2),
+      body: JSON.stringify(params),
     });
     const result = await data.json();
     setSchema(() => JSON.stringify(result, null, 2));
@@ -39,13 +41,17 @@ export const Editor = () => {
 
   const updateSchema = async (query: string) => {
     await getQuery(spanRef);
-    await fetcher(API, { query });
+    await fetcher(API, { query, variables: JSON.parse(vars) });
   };
 
   const onKeyDown = () => {
     setTimeout(() => {
       getQuery(spanRef);
     }, 100);
+  };
+
+  const onChangeVars = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setVars(e.target.value);
   };
 
   return (
@@ -70,7 +76,7 @@ export const Editor = () => {
           <Accordion.Item value="variables">
             <Accordion.Control sx={{ fontSize: '14px' }}>Variables</Accordion.Control>
             <Accordion.Panel>
-              <VariablesSection />
+              <VariablesSection ref={varsRef} onChangeVars={onChangeVars} />
             </Accordion.Panel>
           </Accordion.Item>
 
