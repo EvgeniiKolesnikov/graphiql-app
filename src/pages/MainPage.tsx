@@ -1,5 +1,9 @@
-import { DocsExplorer } from 'components';
+import { Editor } from 'components';
 
 export const MainPage = () => {
-  return <DocsExplorer />;
+  return (
+    <>
+      <Editor />
+    </>
+  );
 };
