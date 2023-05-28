@@ -14,7 +14,7 @@
 .container {
   width: 100%;
   max-width: $max-width;
-  padding: 0 2rem;
+  padding: 0 1rem;
   margin: 0 auto;
 
   @include maxQ-mobile {
@@ -27,24 +27,31 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-
+  gap: 0.7rem;
   @include maxQ-sm-tablet {
     flex-direction: column;
-    gap: 0.7rem;
-    align-items: center;
   }
 }
 
-.btn__wrapper {
-  width: 250px;
+.btn {
+  // width: 290px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 1rem;
-  @include maxQ-sm-tablet {
-    margin-left: 0;
-    flex-direction: column;
-  }
+}
+
+.left__side {
+  width: 290px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right__side {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .menu {
@@ -96,6 +103,13 @@
   padding: 1rem 0;
   backdrop-filter: blur(10px);
   background: $grey-color;
+  text-align: center;
+  background: #2f2d2d;
+  border-radius: 5px;
+  border-radius: 0 0 8px 8px;
+  @include maxQ-sm-tablet {
+    width: 310px;
+  }
 }
 
 .email {
@@ -103,12 +117,12 @@
   width: 150px;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin-left: 1rem;
   text-align: right;
   color: gray;
   @include maxQ-sm-tablet {
-    width: 300px;
-    text-align: center;
+    width: 180px;
+    text-align: left;
+    margin-left: 0rem;
   }
 }
 

@@ -1,35 +1,38 @@
 @use '../../styles/abstracts' as *;
 
 .footer {
-  padding: 1rem 0;
-  border-top: solid 0.5px #bebbbb;
+  width: 100%;
+  margin: 0 auto 4px;
+  display: flex;
+  justify-content: center;
 }
 
 .inner {
+  width: 100%;
+  max-width: $max-width;
+  padding: 0 1rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   @include maxQ-tablet {
     flex-direction: column-reverse;
     align-items: center;
+    padding-bottom: 10px;
   }
 }
 
 .text {
   @include font(1.4rem, 120%);
   @include maxQ-tablet {
-    margin-top: 1rem;
+    margin-top: 8px;
   }
 }
 
 .links__group {
-  width: 75%;
   display: flex;
   justify-content: space-between;
-  @include maxQ-tablet {
-    width: 100%;
-    flex-wrap: wrap;
-  }
+  gap: 5px;
   @media (max-width: 600px) {
     flex-direction: column;
     align-items: center;
@@ -44,13 +47,10 @@
   gap: 0.5rem;
   text-decoration: none;
   color: $dark-color;
+  line-height: 1;
   &:hover {
     color: $main-color;
     text-decoration: none;
-  }
-  @media (max-width: 600px) {
-    display: flex;
-    justify-content: center;
   }
 }
 

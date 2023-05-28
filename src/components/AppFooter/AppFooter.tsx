@@ -40,27 +40,23 @@ export const AppFooter = () => {
   ));
   return (
     <footer className={s.footer}>
-      <div className="container">
-        <div className={s.inner}>
-          <Text className={s.text} color="dimmed">
-            © 2023. {t('All rights reserved')}.
-          </Text>
-          <div className={s.links__group}>
-            {items}
-            <div className={s.link}>
-              <Anchor<'a'>
-                className={s.link}
-                color="dimmed"
-                href="https://rs.school/react"
-                target="_blank"
-                size="sm"
-                ml={'0.5rem'}
-                fz={'1.6rem'}
-              >
-                <img className={s.logo} src={rss} alt="RSSchool logo" width={50} height={30} />
-              </Anchor>
-            </div>
-          </div>
+      <div className={s.inner}>
+        <Text className={s.text} color="dimmed">
+          © 2023. {t('All rights reserved')}.
+        </Text>
+        <div className={s.links__group}>{items}</div>
+        <div className={s.link}>
+          <Anchor<'a'>
+            className={s.link}
+            color="dimmed"
+            href="https://rs.school/react"
+            target="_blank"
+            size="sm"
+            ml={'0.5rem'}
+            fz={'1.6rem'}
+          >
+            <img className={s.logo} src={rss} alt="RSSchool logo" width={50} height={30} />
+          </Anchor>
         </div>
       </div>
     </footer>

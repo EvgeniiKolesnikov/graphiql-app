@@ -20,26 +20,13 @@ body {
 
 #root {
   position: relative;
+  height: 100vh;
+
   display: flex;
   flex-direction: column;
-  height: 100vh;
-}
-
-main {
-  flex: 1 1 auto;
-}
-
-.container {
-  width: 100%;
-  max-width: $max-width;
-  padding: 0 1rem;
-  margin: 0rem auto;
-}
-
-.container.fixed {
-  margin: 7rem auto 1rem;
+  align-items: center;
   @include maxQ-sm-tablet {
-    margin: 17rem auto 1rem;
+    height: auto;
   }
 }
 
