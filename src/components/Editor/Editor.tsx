@@ -1,6 +1,6 @@
 import s from './Editor.module.scss';
 import { Accordion } from '@mantine/core';
-import { useState } from 'react';
+import { MutableRefObject, useRef, useState } from 'react';
 
 import {
   DocsExplorer,
@@ -16,6 +16,7 @@ const API = 'https://rickandmortyapi.com/graphql';
 export const Editor = () => {
   const [query, setQuery] = useState<string>(' ');
   const [schema, setSchema] = useState<null | string>(null);
+  const spanRef = useRef<HTMLSpanElement>(null);
 
   const fetcher = async (url: string, params: object) => {
     const data = await fetch(url, {
@@ -29,14 +30,29 @@ export const Editor = () => {
     setSchema(() => JSON.stringify(result, null, 2));
   };
 
-  const updateSchema = (query: string) => {
-    fetcher(API, { query });
+  const getQuery = async (refElem: MutableRefObject<object | null>) => {
+    if (refElem) {
+      const elem = refElem.current as HTMLSpanElement;
+      setQuery(() => elem.textContent || '');
+    }
+  };
+
+  const updateSchema = async (query: string) => {
+    await getQuery(spanRef);
+    await fetcher(API, { query });
+  };
+
+  const onKeyDown = () => {
+    setTimeout(() => {
+      getQuery(spanRef);
+    }, 100);
   };
 
   return (
     <div className={s.editor}>
       <RequestSection
-        setQuery={setQuery}
+        ref={spanRef}
+        onKeyDown={onKeyDown}
         button={<PlayButton onClick={() => updateSchema(query)} />}
       >
         <Accordion

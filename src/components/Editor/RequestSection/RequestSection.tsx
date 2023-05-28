@@ -1,33 +1,24 @@
 import s from './RequestSection.module.scss';
-import React, { MutableRefObject, useRef } from 'react';
+import { forwardRef } from 'react';
 
 type Props = {
   button: JSX.Element;
-  setQuery: React.Dispatch<React.SetStateAction<string>>;
+  onKeyDown: () => void;
   children: JSX.Element | JSX.Element[];
 };
 
-export const RequestSection = ({ button, setQuery, children }: Props) => {
-  const spanRef = useRef(null);
-
-  const getQuery = (spanElem: MutableRefObject<object | null>) => {
-    if (spanElem) {
-      const elem = spanElem.current as HTMLSpanElement;
-      setQuery(elem.textContent || '');
-    }
-  };
-
-  return (
+export const RequestSection = forwardRef<HTMLSpanElement, Props>(
+  ({ button, onKeyDown, children }: Props, spanRef) => (
     <div className={s.wrapper}>
       {button}
       <span
         ref={spanRef}
         className={s.request}
+        onKeyDown={onKeyDown}
         contentEditable
         suppressContentEditableWarning={true}
-        onKeyDown={() => getQuery(spanRef)}
       ></span>
       {children}
     </div>
-  );
-};
+  )
+);
