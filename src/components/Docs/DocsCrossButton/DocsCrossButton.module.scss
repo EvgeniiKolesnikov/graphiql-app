@@ -1,0 +1,20 @@
+.closeButton {
+  position: absolute;
+  top: 0px;
+  right: 19px;
+  z-index: 2;
+
+  width: 40px;
+  height: 40px;
+
+  background-image: url('../../../assets/cross.svg');
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+
+  transition: 0.5s;
+  transform: rotateX(0deg);
+  &:hover {
+    transform: rotateZ(90deg);
+  }
+}

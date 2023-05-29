@@ -1,0 +1,19 @@
+@use '../../styles/abstracts' as *;
+
+.main {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: $max-width;
+  padding: 0 1rem;
+  margin: 0rem auto;
+  @include maxQ-sm-tablet {
+    min-height: calc(100vh - 260px);
+  }
+}
+
+.main.fixed {
+  margin: 7rem auto 0;
+  @include maxQ-sm-tablet {
+    margin: 11rem auto 1rem;
+  }
+}

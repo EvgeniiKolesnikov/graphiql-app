@@ -1,0 +1,131 @@
+@use '../../styles/abstracts' as *;
+
+.header {
+  @extend %transition;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 100;
+  background: $light-color;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  width: 100%;
+  max-width: $max-width;
+  padding: 0 1rem;
+  margin: 0 auto;
+
+  @include maxQ-mobile {
+    padding: 0rem 1rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  @include maxQ-sm-tablet {
+    flex-direction: column;
+  }
+}
+
+.btn {
+  // width: 290px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.left__side {
+  width: 290px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right__side {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu {
+  user-select: none;
+  margin-right: auto;
+  @include maxQ-sm-tablet {
+    margin-right: 0;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+  &__link {
+    @extend %transition;
+    text-decoration: none;
+    color: $dark-color;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
+.menu__link_sticky {
+  color: $light-color;
+}
+
+.list__item:not(:first-child) {
+  @extend %transition;
+  margin: 0 0.8rem;
+  &:hover {
+    color: $main-color;
+  }
+}
+
+.menu__link_active {
+  color: $main-color;
+}
+
+.menu__link_disabled {
+  pointer-events: none;
+  color: gray;
+}
+
+.sticky {
+  padding: 1rem 0;
+  backdrop-filter: blur(10px);
+  background: $grey-color;
+  text-align: center;
+  background: #2f2d2d;
+  border-radius: 5px;
+  border-radius: 0 0 8px 8px;
+  @include maxQ-sm-tablet {
+    width: 310px;
+  }
+}
+
+.email {
+  font-size: 14px;
+  width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: right;
+  color: gray;
+  @include maxQ-sm-tablet {
+    width: 180px;
+    text-align: left;
+    margin-left: 0rem;
+  }
+}
+
+.link {
+  width: 100px;
+}

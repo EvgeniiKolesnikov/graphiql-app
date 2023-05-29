@@ -1,0 +1,50 @@
+@use '../abstracts' as *;
+
+* {
+  @extend %font-primary;
+  line-height: 120%;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  @include font(1.4rem, 120%);
+  color: $dark-color;
+}
+
+#root {
+  position: relative;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include maxQ-sm-tablet {
+    height: auto;
+  }
+}
+
+.title {
+  margin: 0 auto 1.5rem;
+  @include font(2.4rem, 130%, 700);
+  text-align: center;
+}
+
+.description {
+  @include font(1.6rem, 120%);
+  padding: 0 0 1rem 0;
+  text-align: center;
+}
+
+.notFound {
+  display: block;
+  margin: 0 auto;
+  width: 50vw;
+  height: 60vh;
+}
